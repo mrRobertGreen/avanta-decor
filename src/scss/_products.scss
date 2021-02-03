@@ -51,6 +51,8 @@
 
     .blocks {
         padding-top: 60px;
+        display: grid;  
+        grid-gap: 15px;
 
         .container {
             background: #ffffff;
