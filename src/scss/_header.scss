@@ -1,0 +1,12 @@
+.header {
+    &__row  {
+        .logo {
+            display: flex;
+            justify-content: space-between;
+           
+        }
+    }
+    .mainLogo {
+        height: 80px;
+    }
+}

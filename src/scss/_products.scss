@@ -1,0 +1,70 @@
+.products {
+    padding: 15px;
+
+    .mainText {
+        // нужно добавить паддинг
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+
+        color: #2f2f2f;
+
+        .delivery {
+            padding-top: 10px;
+
+            font-size: 15px;
+            line-height: 15px;
+            color: #565656;
+        }
+
+        .connect {
+            display: flex;
+            padding-top: 20px;
+
+            &__connection {
+                &__button {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 12px 30px 11px;
+
+                    background: #0095f6;
+                    border-radius: 11px;
+                    font-size: 15px;
+                    line-height: 17px;
+                    color: white;
+                }
+            }
+            &__download {
+                padding-left: 31px;
+
+                &__button {
+                    background-color: #fff;
+                    font-size: 14px;
+                    line-height: 23px;
+                    color: #c8c8c8;
+                }
+            }
+        }
+    }
+
+    .blocks {
+        padding-top: 60px;
+
+        .container {
+            background: #ffffff;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+            border-radius: 11px;
+
+            &__content {
+                padding: 29px 25px;
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 20px;
+
+                color: #2f2f2f;
+            }
+        }
+    }
+}
