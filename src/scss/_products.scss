@@ -6,6 +6,7 @@
         font-weight: bold;
         font-size: 20px;
         line-height: 30px;
+        max-width: 350px;
 
         color: #2f2f2f;
 
@@ -52,6 +53,8 @@
         padding-top: 60px;
         display: grid;  
         grid-gap: 15px;
+        max-width: 380px;
+        min-width: 300px;
 
         .container {
             background: #ffffff;
@@ -70,3 +73,11 @@
     }
 }
 
+@media (min-width: 700px) {
+    .products {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+}
