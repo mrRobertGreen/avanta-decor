@@ -70,7 +70,9 @@
     .slick-slide {}
 
     /* Слайд активный (показывается) */
-    .slick-slide.slick-active {}
+    .slick-slide.slick-active {
+        
+    }
 
     /* Слайд основной */
     .slick-slide.slick-current {}
@@ -98,6 +100,8 @@
         @include flex-row;
         align-items: flex-end;
         max-height: 7px;
+        padding-top: 45px;
+        margin-bottom: 45px;
     }
 
     .slick-dots li {}
