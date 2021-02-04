@@ -2,6 +2,10 @@ $(window).on("load", function () {
     if (window.matchMedia("(max-width: 768px)").matches) {
         enableMenuScroll("menu-row")
     }
+
+    $(".menu__item").forEach(item => {
+        item.addEventListener("click", toggleActiveMenuItem)
+    })
 })  
 
 const enableMenuScroll = (id) => {
@@ -15,4 +19,8 @@ const enableMenuScroll = (id) => {
         swingSpeed: 0.5,
     };
     slider = new Sly("#"+id, options).init();
+}
+
+function toggleActiveMenuItem(e) {
+   console.log("click");
 }
