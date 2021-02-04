@@ -5,12 +5,13 @@ $(document).ready(function () {
         arrows: false,
         dots: true,
         centerMode: true,
-        centerPadding: '25px',
+        centerPadding: '50px',
         mobileFirst: true,
         slidesToShow: 1,
         focusOnSelect: true,
-        swipe: true,
+        swipe: true,    
         touchMove: true,
-        variableWidth: true
+        variableWidth: true,
+        
 })
 })

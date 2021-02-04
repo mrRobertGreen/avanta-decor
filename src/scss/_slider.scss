@@ -5,6 +5,7 @@
     &__item:nth-child(1) {
         visibility: visible;
     }
+
 }
 .slider.slick-initialized {
     .slider__item {
@@ -47,19 +48,24 @@
 
     ul {
         list-style: none;
+
     }
 
     /* Слайдер */
-    .slick-slider {}
+    .slick-slider {
+    }
 
     /* Слайдер запущен */
-    .slick-slider.slick-initialized {}
+    .slick-slider.slick-initialized {
+    }
 
     /* Слайдер с точками */
-    .slick-slider.slick-dotted {}
+    .slick-slider.slick-dotted {
+    }
 
     /* Ограничивающая оболочка */
-    .slick-list {}
+    .slick-list {
+    }
 
     /* Лента слайдов */
     .slick-track {
@@ -67,33 +73,43 @@
     }
 
     /* Слайд */
-    .slick-slide {}
+    .slick-slide {
+        opacity: 0.45;
+    }
 
     /* Слайд активный (показывается) */
     .slick-slide.slick-active {
-        
+        opacity: 1;
+        padding: 14px;
     }
 
     /* Слайд основной */
-    .slick-slide.slick-current {}
+    .slick-slide.slick-current {
+    }
 
     /* Слайд по центру */
-    .slick-slide.slick-center {}
+    .slick-slide.slick-center {
+    }
 
     /* Клонированный слайд */
-    .slick-slide.slick-cloned {}
+    .slick-slide.slick-cloned {
+    }
 
     /* Стрелка */
-    .slick-arrow {}
+    .slick-arrow {
+    }
 
     /* Стрелка влево */
-    .slick-arrow.slick-prev {}
+    .slick-arrow.slick-prev {
+    }
 
     /* Стрелка вправо */
-    .slick-arrow.slick-next {}
+    .slick-arrow.slick-next {
+    }
 
     /* Стрелка не активная */
-    .slick-arrow.slick-disabled {}
+    .slick-arrow.slick-disabled {
+    }
 
     /* Точки (булиты) */
     .slick-dots {
@@ -104,11 +120,13 @@
         margin-bottom: 45px;
     }
 
-    .slick-dots li {}
+    .slick-dots li {
+    }
 
     /* Активная точка */
     .slick-dots li.slick-active button {
         //background-color: $yellow;
+        background: #0095f6;
     }
 
     /* Элемент точки */
@@ -166,11 +184,10 @@
             width: 11px;
             height: 11px;
         }
-
     }
 
     .slider {
-        >div {
+        > div {
             display: none;
 
             &:first-child {
@@ -179,10 +196,9 @@
         }
 
         &.slick-initialized {
-            >div {
+            > div {
                 display: block;
             }
         }
     }
-
 }
