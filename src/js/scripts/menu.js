@@ -3,9 +3,7 @@ $(window).on("load", function () {
         enableMenuScroll("menu-row")
     }
 
-    $(".menu__item").forEach(item => {
-        item.addEventListener("click", toggleActiveMenuItem)
-    })
+    $(".menu__item").on("click", toggleActiveMenuItem)
 })  
 
 const enableMenuScroll = (id) => {
@@ -22,5 +20,6 @@ const enableMenuScroll = (id) => {
 }
 
 function toggleActiveMenuItem(e) {
-   console.log("click");
+   $(".menu__item").removeClass("menu__item_active")
+   $(e.target).addClass("menu__item_active")
 }
