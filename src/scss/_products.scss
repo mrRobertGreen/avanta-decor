@@ -3,6 +3,7 @@
 
     .mainText {
         // нужно добавить паддинг
+        padding: 0 15px;
         font-weight: bold;
         font-size: 20px;
         line-height: 30px;
@@ -11,7 +12,7 @@
 
         .delivery {
             padding-top: 10px;
-
+            background: #000;
             font-size: 15px;
             line-height: 15px;
             color: #565656;
