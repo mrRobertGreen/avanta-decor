@@ -1,6 +1,10 @@
 .forms {
-    // padding-bottom: 150px;
-    background-color: blue;
+    // max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
     &__title {
         color: $black;
         font-weight: 500;
@@ -13,21 +17,50 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        // background-color: red;
+        grid-gap: 15px;
 
         &__item {
-            // background-color: red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+
             p {
                 font-size: 15px;
                 line-height: 18px;
                 text-align: center;
                 color: $dark-grey;
+                padding-top: 15px;
             }
-            img {
-                background: #f7f7f7; 
+
+            .img {
+                background: $light-grey;
                 border-radius: 11px;
-                height: 50px;
-                width: 50px;
+                height: 160px;
+                width: 160px;
+                margin-top: 27px;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .forms {
+        .img {
+            height: 90px;
+            width: 90px;
+            // background-color: red;
+        }
+    }
+}
+@media (min-width: 710px) {
+    .forms {
+        .grid {
+            display: flex;
+            align-items: center;
+            &__item {
+                padding-right: 19px;
             }
         }
     }
