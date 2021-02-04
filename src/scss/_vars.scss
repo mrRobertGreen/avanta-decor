@@ -11,20 +11,6 @@
     align-items: center;
     justify-content: center;
 }
-@mixin with-left-line($color, $width, $left, $bottom: 0, $height: 100%) {
-    &:before {
-        position: absolute;
-        border-radius: 5px;
-        left: $left;
-        content: "";
-        width: $width;
-        background-color: $color;
-        height: $height;
-        bottom: $bottom;
-        display: inline-block;
-    }
-}
-
 /* Variables */
 $dark-grey: #8C8C8C;
 $light-grey: #DEDEDE;
@@ -35,3 +21,7 @@ $yellow: #FDD706;
 $blue: #0095F6;
 
 /* Classes */
+._hidden {
+    visibility: hidden;
+    opacity: 0;
+}
