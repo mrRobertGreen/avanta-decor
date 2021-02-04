@@ -9,7 +9,7 @@
         font-size: 20px;
         line-height: 30px;
         max-width: 350px;
-        color:$black;
+        color: $black;
 
         .delivery {
             padding-top: 10px;
@@ -34,14 +34,15 @@
                     border-radius: 11px;
                     font-size: 15px;
                     line-height: 17px;
-                    color:$white;
+                    color: $white;
                 }
             }
+
             &__download {
                 padding-left: 30px;
 
                 &__button {
-                    background-color:$white;
+                    background-color: $white;
                     font-size: 14px;
                     line-height: 23px;
                     color: $grey;
@@ -68,20 +69,24 @@
                 font-size: 17px;
                 line-height: 20px;
                 text-align: left;
-                //display: flex;
-                //flex-direction: column;
                 width: 100%;
-
                 color: $black;
+                height: 125px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
 
             &__arrow {
                 width: 20px;
                 height: 2px;
                 background: $black;
+                display: block;
                 border-radius: 2px;
                 position: relative;
-                &::after, &::before {
+
+                &::after,
+                &::before {
                     border-radius: 2px;
                     content: "";
                     position: absolute;
@@ -93,6 +98,7 @@
                     bottom: 4px;
                     transform: rotate(45deg);
                 }
+
                 &::before {
                     transform: rotate(-45deg);
                     bottom: auto;
@@ -106,8 +112,7 @@
 .products-list-btn {
     background-color: $white;
     width: 100%;
-    //display: flex;
-    //padding: 29px 25px;
+    height: 125px;
 }
 
 @media (min-width: 700px) {
@@ -125,6 +130,7 @@
             font-size: 15px;
             line-height: 23px;
         }
+
         .delivery {
             font-size: 12px;
             line-height: 12px;
