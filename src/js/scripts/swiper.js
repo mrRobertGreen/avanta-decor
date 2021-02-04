@@ -1,4 +1,4 @@
-$('.center').slick({
+$('.discounts__slider').slick({
     centerMode: true,
     centerPadding: '60px',
     slidesToShow: 3,
@@ -9,7 +9,7 @@ $('.center').slick({
                 arrows: false,
                 centerMode: true,
                 centerPadding: '40px',
-                slidesToShow: 3
+                slidesToShow: 1.5
             }
         },
         {
