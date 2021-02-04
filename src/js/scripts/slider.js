@@ -5,13 +5,11 @@ $(document).ready(function () {
         arrows: false,
         dots: true,
         centerMode: true,
-        centerPadding: '50px',
-        mobileFirst: true,
+        centerPadding: '50px', 
         slidesToShow: 1,
         focusOnSelect: true,
         swipe: true,    
         touchMove: true,
-        variableWidth: true,
-        
+        variableWidth: true
 })
 })
