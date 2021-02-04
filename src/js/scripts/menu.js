@@ -1,6 +1,6 @@
 $(window).on("load", function () {
     if (window.matchMedia("(max-width: 768px)").matches) {
-        enableMenuScroll("menu")
+        enableMenuScroll("menu-row")
     }
 })  
 
