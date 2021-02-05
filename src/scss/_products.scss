@@ -21,6 +21,7 @@
         .connect {
             display: flex;
             padding-top: 20px;
+            align-items: center;
 
             &__connection {
                 &__button {
@@ -41,7 +42,7 @@
             &__download {
                 padding-left: 30px;
 
-                &__button {
+                ._button {
                     background-color: $white;
                     font-size: 14px;
                     line-height: 23px;
@@ -129,20 +130,20 @@
         .mainText {
             font-size: 15px;
             line-height: 23px;
-        }
 
-        .delivery {
-            font-size: 12px;
-            line-height: 12px;
-        }
+            .delivery {
+                font-size: 12px;
+                line-height: 12px;
+            }
 
-        .connect {
-            &__download {
-                padding-left: 0px;
+            .connect {
+                &__download {
+                    padding-left: 10px;
 
-                &__button {
-                    font-size: 8px;
-                    line-height: 15px;
+                    ._button {
+                        font-size: 14px;
+                        line-height: 23px;
+                    }
                 }
             }
         }

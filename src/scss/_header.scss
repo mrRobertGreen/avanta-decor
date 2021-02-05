@@ -1,12 +1,23 @@
 .header {
-    &__row  {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
         .logo {
-            display: flex;
-            justify-content: space-between;
-           
+            width: 176px;
+            background-color: red;
+
+            div {
+                display: flex;
+                a > img {
+                    width: 30px;
+                }
+            }
         }
     }
     .mainLogo {
-        height: 80px;
+        width: 176px;
     }
 }
