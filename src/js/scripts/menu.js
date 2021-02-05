@@ -1,12 +1,12 @@
 $(window).on("load", function () {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        enableMenuScroll("menu-row")
+    if (window.matchMedia("(max-width: 425px)").matches) {
+        enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
     }
 
     $(".menu__item").on("click", toggleActiveMenuItem)
-})  
+})
 
-const enableMenuScroll = (id) => {
+const enableMenuScroll = (sliderId, itemsClass, stepLengths) => {
     const options = {
         horizontal: 1,
         speed: 300,
@@ -16,10 +16,18 @@ const enableMenuScroll = (id) => {
         releaseSwing: true,
         swingSpeed: 0.5,
     };
-    slider = new Sly("#"+id, options).init();
+    slider = new Sly("#" + sliderId, options).init();
+
+    $("." + itemsClass).each((idx, item) => {
+        $(item).click(() => {
+            slider.slideTo(stepLengths[idx])
+        })
+    })
+
 }
 
 function toggleActiveMenuItem(e) {
-   $(".menu__item").removeClass("menu__item_active")
-   $(e.target).addClass("menu__item_active")
+    $(".menu__item").removeClass("menu__item_active")
+    const curItem = $(e.target)
+    curItem.addClass("menu__item_active")
 }
