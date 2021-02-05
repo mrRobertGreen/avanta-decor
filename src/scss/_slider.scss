@@ -75,12 +75,12 @@
     /* Слайд */
     .slick-slide {
         opacity: 0.45;
+        padding: 14px;
     }
 
     /* Слайд активный (показывается) */
     .slick-slide.slick-active {
         opacity: 1;
-        padding: 14px;
     }
 
     /* Слайд основной */
@@ -126,7 +126,7 @@
     /* Активная точка */
     .slick-dots li.slick-active button {
         //background-color: $yellow;
-        background: #0095f6;
+        background: $blue;
     }
 
     /* Элемент точки */
@@ -136,7 +136,6 @@
         width: 7px;
         height: 7px;
         border-radius: 50%;
-        //background-color: $light-grey;
     }
 
     @media (min-width: 450px) {
@@ -165,8 +164,8 @@
             margin-left: 1px;
         }
 
-        .slider {
-            max-width: 333px;
+        .discounts__slider {
+            // max-width: 333px;
 
             &__item {
                 font-size: 27px;
@@ -186,7 +185,7 @@
         }
     }
 
-    .slider {
+    .discounts__slider {
         > div {
             display: none;
 
