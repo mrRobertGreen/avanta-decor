@@ -2,18 +2,20 @@
 
 .menu {
     display: flex;
-    padding: 15px 0 15px 15px;
+    padding-left: 15px;
     background: $white;
-    padding-bottom: 60px;
     overflow-x: hidden;
+    justify-content: center;
+    margin-bottom: 45px;
 
     &__row {
         width: 390px;
         display: flex;
-        //padding: 5px 0 5px 15px;
+        padding: 15px 15px 15px 3px;
     }
 
     &__btn {
+        cursor: pointer;
         width: 40px;
         height: 40px;
         min-width: 40px;
@@ -24,7 +26,7 @@
         justify-content: center;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
         border-radius: 11px;
-        margin-right: 15px;
+        margin: 15px 12px 15px 0;
     }
 
     &__btn-line {
@@ -45,6 +47,8 @@
     }
 
     &__item {
+        cursor: pointer;
+        display: block;
         font-weight: 500;
         font-size: 15px;
         padding: 13px 20px;
