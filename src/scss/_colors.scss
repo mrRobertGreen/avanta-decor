@@ -1,6 +1,5 @@
 .colors {
     padding-top: 102px;
-    
 
     &__title {
         font-weight: 500;
@@ -18,21 +17,20 @@
         color: $grey;
         padding-top: 12px;
     }
-    
+
     &__items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 15px;
+        grid-gap: calc(15px + 8 * (100vw - 320px) / (1600 - 320));;
         padding-top: 30px;
         max-width: 467px;
         margin: 0 auto;
-        
+
         div {
             background-color: $light-grey;
-            height: 70px;
-            width: 70px;
-            border-radius: 60px;
+            height: calc(70px + (115 - 70) * (100vw - 320px) / (1600 - 320));
+            width: calc(70px + (115 - 70) * (100vw - 320px) / (1600 - 320));
+            border-radius: 70px;
         }
     }
 }
-

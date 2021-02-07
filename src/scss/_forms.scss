@@ -36,8 +36,8 @@
             .img {
                 background: $light-grey;
                 border-radius: 11px;
-                height: 160px;
-                width: 160px;
+                height: calc(148px + (223 - 145)*(100vw - 320px)/(1600 - 320));
+                width: calc(156px + (232 - 160)*(100vw - 320px)/(1600 - 320));
                 margin-top: 27px;
             }
         }
@@ -49,17 +49,17 @@
         .img {
             height: 90px;
             width: 90px;
-            // background-color: red;
         }
     }
 }
-@media (min-width: 710px) {
+@media (min-width: 860px) {
     .forms {
         .grid {
             display: flex;
             align-items: center;
+
             &__item {
-                padding-right: 19px;
+                padding-right: 20px;
             }
         }
     }
