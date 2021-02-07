@@ -18,19 +18,35 @@
         padding-top: 12px;
     }
 
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: calc(15px + 8 * (100vw - 320px) / (1600 - 320));;
+        // grid-template-rows: auto;
+        grid-gap: 15px;
         padding-top: 30px;
-        max-width: 467px;
-        margin: 0 auto;
+        // max-width: 467px;
+        // margin: 0 auto;
 
         div {
             background-color: $light-grey;
             height: calc(70px + (115 - 70) * (100vw - 320px) / (1600 - 320));
             width: calc(70px + (115 - 70) * (100vw - 320px) / (1600 - 320));
             border-radius: 70px;
+        }
+    }
+}
+
+@media (max-width: 820px) {
+    .colors {
+        &__items { 
+            grid-gap: 23px;
         }
     }
 }

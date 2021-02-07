@@ -36,8 +36,8 @@
             .img {
                 background: $light-grey;
                 border-radius: 11px;
-                height: calc(148px + (223 - 145)*(100vw - 320px)/(1600 - 320));
-                width: calc(156px + (232 - 160)*(100vw - 320px)/(1600 - 320));
+                height: calc(150px + (225 - 150)*(100vw - 320px)/(1600 - 320));
+                width: calc(165px + (248 - 165)*(100vw - 320px)/(1600 - 320));
                 margin-top: 27px;
             }
         }
@@ -52,7 +52,7 @@
         }
     }
 }
-@media (min-width: 860px) {
+@media (min-width: 820px) {
     .forms {
         .grid {
             grid-gap: 30px;
@@ -60,11 +60,12 @@
     }
 }
 
-@media (min-width: 860px) {
+@media (min-width: 1200px) {
     .forms {
         .grid {
-            display: flex;
-            align-items: center;
+            // display: flex;
+            // align-items: center;
+            grid-template-columns: repeat(4, 1fr);
 
             &__item {
                 padding-right: 30px;
