@@ -1,0 +1,104 @@
+.building {
+    padding-top: 105px;
+
+    &__title {
+    }
+
+    &__subtitle {
+        padding-top: 15px;
+    }
+
+    &__style {
+    }
+
+    &__dimensions {
+    }
+
+    &__size {
+    }
+
+    &__btn {
+    }
+}
+.types {
+    padding-top: 35px;
+    display: flex;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        height: 125px;
+        width: 125px;
+        background-color: $light-grey;
+        border-radius: 11px;
+    }
+
+    &__name {
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+        padding-top: 11px;
+    }
+}
+.buildings {
+    &__types {
+    }
+
+    &__material {
+    }
+}
+.material {
+    padding: 30px 15px 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+
+    &__item {
+        background: #f7f7f7;
+        border-radius: 11px;
+        max-width: 172px;
+
+        //Взято из фигмы
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 13px 15px 12px;
+
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+        color: $grey;
+    }
+}
+.style {
+    display: flex;
+    padding-top: 25px;
+    padding-left: 15px;
+
+    &__item {
+        font-size: 15px;
+        line-height: 15px;
+        color: $grey;
+        padding-right: 25px;
+    }
+}
+.range {
+    padding: 40px 15px 0 15px;
+
+    &__input {
+        width: 100%;
+        padding-top: 25px;
+    }
+}
+.size {
+    &__metres {
+    }
+
+    &__price {
+    }
+}

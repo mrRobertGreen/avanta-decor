@@ -41,10 +41,13 @@
     <div class="building__dimensions">
         <div class="range">
             <!-- Something else... -->
-            <input type="range" class="range__input">
+            <div class="range__title">
+                Высота: <span>мм</span>
+            </div>
+            <input type="range" class="range__input" min="0" max="6" step="1.5">
         </div>
         <div class="range">
-            <input type="range" class="range__input">
+            <input type="range" class="range__input" min="1" max="5" step="1">
         </div>
     </div>
     <div class="building__size size">
