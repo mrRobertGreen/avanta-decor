@@ -36,8 +36,8 @@
             .img {
                 background: $light-grey;
                 border-radius: 11px;
-                height: 160px;
-                width: 160px;
+                height: calc(150px + (225 - 145)*(100vw - 320px)/(1200 - 320));
+                width: calc(160px + (230 - 160)*(100vw - 320px)/(1200 - 320));
                 margin-top: 27px;
             }
         }
