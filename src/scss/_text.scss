@@ -1,0 +1,18 @@
+@import "./vars";
+
+.title {
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 23px;
+    text-align: center;
+    color: $black;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 27px;
+    text-align: center;
+    color: $grey;
+}
