@@ -36,8 +36,8 @@
             .img {
                 background: $light-grey;
                 border-radius: 11px;
-                height: calc(148px + (222 - 145)*(100vw - 320px)/(1800 - 320));
-                width: calc(156px + (230 - 160)*(100vw - 320px)/(1800 - 320));
+                height: calc(148px + (223 - 145)*(100vw - 320px)/(1600 - 320));
+                width: calc(156px + (232 - 160)*(100vw - 320px)/(1600 - 320));
                 margin-top: 27px;
             }
         }
@@ -49,7 +49,6 @@
         .img {
             height: 90px;
             width: 90px;
-            // background-color: red;
         }
     }
 }
