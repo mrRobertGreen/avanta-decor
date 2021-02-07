@@ -22,7 +22,6 @@
 }
 .types {
     padding-top: 35px;
-    display: flex;
 
     &__item {
         display: flex;
@@ -95,6 +94,57 @@
         padding-top: 25px;
     }
 }
+// ПОЛЗУНОК!!
+input[type=range] {
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: $light-grey;
+    border: none;
+    border-radius: 5px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $blue;
+    margin-top: -4px;
+}
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $blue;
+    margin-top: -4px;
+}
+input[type=range]::-ms-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: $blue;
+    margin-top: -4px;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #2497E3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #2497E3;
+  border-radius: 2px;
+}
+
 .size {
     &__metres {
     }
