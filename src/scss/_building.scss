@@ -93,12 +93,28 @@
         width: 100%;
         padding-top: 25px;
     }
+    &__numbers {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 15px;
+        line-height: 15px;
+        text-align: center;
+        padding: 0 5%;
+        color: #c8c8c8;
+
+        div {
+            width: 19px;
+            text-align: center;
+        }
+    }
 }
 // ПОЛЗУНОК!!
 // input[type=range] {
 //     -webkit-appearance: none;
 //     border-radius: 0;
-//     height: 5px;    
+//     height: 5px;
 //     padding: 0;
 // }
 
