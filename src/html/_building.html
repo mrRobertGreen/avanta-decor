@@ -1,8 +1,57 @@
 <div class="building">
-    @@include("./_title.html", {
-    text: "Соберите плинтус"
-    })
-    @@include("./_subtitle.html", {
-    text: "Отправьте нам сборку и мы проконсультируем Вас"
-    })
+    <div class="building__title">
+        @@include("./_title.html", {
+        text: "Соберите плинтус"
+        })
+    </div>
+    <div class="building__subtitle">
+        @@include("./_subtitle.html", {
+        text: "Отправьте нам сборку и мы проконсультируем Вас"
+        })
+    </div>
+    <div class="types buildings__types">
+        <div class="types__item">
+            <div class="types__img"></div>
+            <div class="types__name">Сапожок</div>
+        </div>
+        <div class="types__item">
+            <div class="types__img"></div>
+            <div class="types__name">Фигурный</div>
+        </div>
+        <div class="types__item">
+            <div class="types__img"></div>
+            <div class="types__name">Евро</div>
+        </div>
+        <div class="types__item">
+            <div class="types__img"></div>
+            <div class="types__name">Евро (прямой)</div>
+        </div>
+    </div>
+    <div class="material buildings__material">
+        <div class="material__item">МДФ</div>
+        <div class="material__item">Бук</div>
+        <div class="material__item">Дуб</div>
+        <div class="material__item">Ясень</div>
+    </div>
+    <div class="building__style style">
+        <div class="style__item">Финишная пленка</div>
+        <div class="style__item">Шпон</div>
+        <div class="style__item">Выкрашенный</div>
+    </div>
+    <div class="building__dimensions">
+        <div class="range">
+            <!-- Something else... -->
+            <input type="range" class="range__input">
+        </div>
+        <div class="range">
+            <input type="range" class="range__input">
+        </div>
+    </div>
+    <div class="building__size size">
+        <div class="size__metres"></div>
+        <div class="size__price"></div>
+    </div>
+    <div class="building__btn">
+        <button>Отправить сборку</button>
+    </div>
 </div>
