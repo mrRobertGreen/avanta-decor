@@ -97,6 +97,9 @@
 // ПОЛЗУНОК!!
 input[type=range] {
     -webkit-appearance: none;
+    border-radius: 0;
+    height: 5px;    
+    padding: 0;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
@@ -132,17 +135,6 @@ input[type=range]::-ms-thumb {
     border-radius: 50%;
     background: $blue;
     margin-top: -4px;
-}
-
-input[type=range]::-ms-fill-lower {
-  background: #2497E3;
-  border: 0px solid #000000;
-  border-radius: 2px;
-  box-shadow: 0px 0px 0px #000000;
-}
-input[type=range]::-ms-fill-upper {
-  background: #2497E3;
-  border-radius: 2px;
 }
 
 .size {
