@@ -36,8 +36,8 @@
             .img {
                 background: $light-grey;
                 border-radius: 11px;
-                height: calc(150px + (225 - 145)*(100vw - 320px)/(1200 - 320));
-                width: calc(160px + (230 - 160)*(100vw - 320px)/(1200 - 320));
+                height: calc(148px + (222 - 145)*(100vw - 320px)/(1800 - 320));
+                width: calc(156px + (230 - 160)*(100vw - 320px)/(1800 - 320));
                 margin-top: 27px;
             }
         }
@@ -53,13 +53,14 @@
         }
     }
 }
-@media (min-width: 710px) {
+@media (min-width: 860px) {
     .forms {
         .grid {
             display: flex;
             align-items: center;
+
             &__item {
-                padding-right: 19px;
+                padding-right: 20px;
             }
         }
     }
