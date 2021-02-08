@@ -28,11 +28,8 @@
     &__items {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        // grid-template-rows: auto;
         grid-gap: 15px;
         padding-top: 30px;
-        // max-width: 467px;
-        // margin: 0 auto;
 
         div {
             background-color: $light-grey;
@@ -45,8 +42,20 @@
 
 @media (max-width: 820px) {
     .colors {
-        &__items { 
+        &__items {
             grid-gap: 23px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .colors__items {
+        padding: 30px 30px 0 30px;
+        grid-gap: 8px;
+
+        div {
+            height: 67px;
+            width: 67px;
         }
     }
 }

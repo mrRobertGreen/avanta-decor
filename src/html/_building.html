@@ -29,56 +29,59 @@
             </div>
         </div>
     </div>
-    <div class="material buildings__material">
-        <div class="material__item material__item_active">МДФ</div>
-        <div class="material__item">Бук</div>
-        <div class="material__item">Дуб</div>
-        <div class="material__item">Ясень</div>
-    </div>
-    <div class="building__style style">
-        <div class="style__item style__item_active">Финишная пленка</div>
-        <div class="style__item">Шпон</div>
-        <div class="style__item">Выкрашенный</div>
-    </div>
-    <div class="building__dimensions">
-        <div class="range">
-            <div class="range__title">
-                Высота: <span>мм</span>
+    <div class="desktop-grid">
+        <div class="material buildings__material">
+            <div class="material__item material__item_active">МДФ</div>
+            <div class="material__item">Бук</div>
+            <div class="material__item">Дуб</div>
+            <div class="material__item">Ясень</div>
+        </div>
+        <div class="building__style style">
+            <div class="style__item style__item_active">Финишная пленка</div>
+            <div class="style__item">Шпон</div>
+            <div class="style__item">Выкрашенный</div>
+        </div>
+        <div class="building__dimensions">
+            <div class="range">
+                <div class="range__title">
+                    Высота: <span>мм</span>
+                </div>
+                <input type="range" class="range__input " value="5" min="0" max="10" id="range-height-1">
+                <div class="range__numbers">
+                    <div>70</div>
+                    <div>80</div>
+                    <div>100</div>
+                    <div>120</div>
+                    <div>150</div>
+                </div>
             </div>
-            <input type="range" class="range__input" value="5" min="0" max="10" id="range-height-1">
-            <div class="range__numbers">
-                <div>70</div>
-                <div>80</div>
-                <div>100</div>
-                <div>120</div>
-                <div>150</div>
+            <div class="range" id="thickness">
+                <div class="range__title">
+                    Толщина: <span>мм</span>
+                </div>
+                <input type="range" class="range__input" value="5" min="0" max="10" id="range-thickness-1">
+                <div class="range__numbers">
+                    <div>70</div>
+                    <div>80</div>
+                    <div class="">100</div>
+                    <div>120</div>
+                    <div>150</div>
+                </div>
             </div>
         </div>
-        <div class="range">
-            <div class="range__title">
-                Толщина: <span>мм</span>
+        <div class="building__size size">
+            <div class="size__metres">
+                Пог. метры
+                <input type="number" class="size__input" maxlength="4" value="1" min="1">
+                <!-- <select name="" id=""></select> -->
             </div>
-            <input type="range" class="range__input"  value="5" min="0" max="10" id="range-thickness-1">
-            <div class="range__numbers">
-                <div>70</div>
-                <div>80</div>
-                <div class="">100</div>
-                <div>120</div>
-                <div>150</div>
+            <div class="size__price">
+                <p>470 ₽</p>
             </div>
         </div>
-    </div>
-    <div class="building__size size">
-        <div class="size__metres">
-            Пог. метры
-            <input type="number" class="size__input" maxlength="4" value="1" min="1">
-            <!-- <select name="" id=""></select> -->
-        </div>
-        <div class="size__price">
-            <p>470 ₽</p>
+        <div class="building__btn">
+            <button>Отправить сборку</button>
         </div>
     </div>
-    <div class="building__btn">
-        <button>Отправить сборку</button>
-    </div>
+
 </div>
