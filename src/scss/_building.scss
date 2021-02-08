@@ -85,7 +85,7 @@
     grid-gap: 15px;
 
     &__item {
-        background: #f7f7f7;
+        background: $light-grey;
         border-radius: 11px;
         max-width: 172px;
 
@@ -129,11 +129,6 @@
 .range {
     padding: 40px 15px 0 15px;
 
-    &__input {
-        width: 100%;
-        padding-top: 25px;
-    }
-
     &__numbers {
         display: flex;
         justify-content: space-between;
@@ -150,50 +145,39 @@
             text-align: center;
         }
     }
+    // &__input {
+    //     -webkit-appearance: none;
+    //     width: 100%;
+    //     padding-top: 25px;
+    // }
+    // &__input::-webkit-slider-runnable-track {
+    //     height: 5px;
+    //     outline: none;
+
+    //     background: #f7f7f7;
+    //     border-radius: 5px;
+    //     border: none;
+    // }
+    // &__input::-webkit-slider-thumb {
+    //     -webkit-appearance: none;
+    //     width: 23px;
+    //     height: 23px;
+    //     padding-top: -10px;
+    //     cursor: pointer;
+    //     z-index: 3;
+    //     position: relative;
+    // }
+
+    // #selector {
+    //     height: 104px;
+    //     width: 23px;
+    //     position: absolute;
+    //     bottom: -20px;
+    // }
+
+    .selectBtn {
+    }
 }
-
-// ПОЛЗУНОК!!
-// input[type=range] {
-//     -webkit-appearance: none;
-//     border-radius: 0;
-//     height: 5px;
-//     padding: 0;
-// }
-
-// input[type=range]::-webkit-slider-runnable-track {
-//     width: 300px;
-//     height: 5px;
-//     background: $light-grey;
-//     border: none;
-//     border-radius: 5px;
-// }
-// input[type=range]::-webkit-slider-thumb {
-//     -webkit-appearance: none;
-//     border: none;
-//     height: 16px;
-//     width: 16px;
-//     border-radius: 50%;
-//     background: $blue;
-//     margin-top: -4px;
-// }
-// input[type=range]::-moz-range-thumb {
-//     -webkit-appearance: none;
-//     border: none;
-//     height: 16px;
-//     width: 16px;
-//     border-radius: 50%;
-//     background: $blue;
-//     margin-top: -4px;
-// }
-// input[type=range]::-ms-thumb {
-//     -webkit-appearance: none;
-//     border: none;
-//     height: 16px;
-//     width: 16px;
-//     border-radius: 50%;
-//     background: $blue;
-//     margin-top: -4px;
-// }
 
 .size {
     display: flex;
@@ -252,7 +236,7 @@
             display: flex;
             align-items: center;
             text-align: center;
-            color: #2f2f2f;
+            color: $black;
             padding-top: 10px;
             padding-bottom: 10px;
         }
