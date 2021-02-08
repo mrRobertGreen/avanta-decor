@@ -1,19 +1,36 @@
 .building {
     padding-top: 105px;
 
-    &__title {}
+    &__title {
+    }
 
     &__subtitle {
         padding-top: 15px;
     }
 
-    &__style {}
+    &__style {
+    }
 
-    &__dimensions {}
+    &__dimensions {
+    }
 
-    &__size {}
+    &__size {
+    }
 
-    &__btn {}
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 13px 30px 12px;
+
+        background: $blue;
+        border-radius: 11px;
+        button {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .types {
@@ -54,9 +71,11 @@
 }
 
 .buildings {
-    &__types {}
+    &__types {
+    }
 
-    &__material {}
+    &__material {
+    }
 }
 
 .material {
@@ -177,7 +196,65 @@
 // }
 
 .size {
-    &__metres {}
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+    padding: 38px 15px 0 15px;
 
-    &__price {}
+    &__metres {
+        font-size: 15px;
+        line-height: 23px;
+        color: $grey;
+        flex: 50%;
+        padding-right: 8px;
+    }
+    &__input {
+        border: none;
+        max-width: 71px;
+        background: #ffffff;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+        border-radius: 11px;
+
+        height: 40px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 15px;
+        padding-left: 15px;
+        color: #2f2f2f;
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    &__input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    &__input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    &__price {
+        background: $light-grey;
+        border-radius: 11px;
+        max-width: 360px;
+
+        flex: 50%;
+        display: flex;
+        justify-content: center;
+
+        p {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 20px;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #2f2f2f;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
 }
