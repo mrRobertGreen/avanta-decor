@@ -15,22 +15,23 @@ const enableMenuScroll = (sliderId, itemsClass, stepLengths) => {
             slider.slideTo(stepLengths[idx])
         })
     })
+    return slider
 }
 
 const toggleActiveClass = (e, className, activeClassName) => {
     $("."+className).removeClass(activeClassName)
-    const curItem = $(e.target)
+    const curItem = $(e.currentTarget)
     curItem.addClass(activeClassName)
 }
 
 if (window.matchMedia("(max-width: 425px)").matches) {
-    enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
+    const slider = enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
 }
 if (window.matchMedia("(max-width: 580px)").matches) {
-    enableMenuScroll("types-row", "types__item", [0, 70, 130, 210])
+    const slider = enableMenuScroll("types-row", "types__item", [0, 70, 130, 210])
 }
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, "menu__item", "menu__item_active"))
-$(".types__img").on("click", (e) => toggleActiveClass(e, "types__img", "types__img_active"))
+$(".types__item").on("click", (e) => toggleActiveClass(e, "types__item", "types__item_active"))
 $(".material__item").on("click", (e) => toggleActiveClass(e, "material__item", "material__item_active"))
 $(".style__item").on("click", (e) => toggleActiveClass(e, "style__item", "style__item_active"))

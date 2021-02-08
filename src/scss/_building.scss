@@ -38,8 +38,11 @@
         border-radius: 11px;
     }
 
-    &__img_active {
-        border: 2px solid $blue;
+    &__item_active {
+        //background: #000;
+        .types__img {
+            border: 2px solid $blue;
+        }
     }
 
     &__name {
@@ -98,6 +101,7 @@
         color: $grey;
         padding-right: 25px;
     }
+
     &__item_active {
         color: $blue;
     }
