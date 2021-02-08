@@ -1,29 +1,32 @@
 .building {
     padding-top: 105px;
 
-    &__title {
-    }
+    &__title {}
 
     &__subtitle {
         padding-top: 15px;
     }
 
-    &__style {
-    }
+    &__style {}
 
-    &__dimensions {
-    }
+    &__dimensions {}
 
-    &__size {
-    }
+    &__size {}
 
-    &__btn {
-    }
+    &__btn {}
 }
+
 .types {
     padding-top: 35px;
+    display: flex;
+    padding-left: 15px;
+
+    &__track {
+        display: flex;
+    }
 
     &__item {
+        margin-right: 15px;
         display: flex;
         flex-direction: column;
     }
@@ -35,6 +38,10 @@
         border-radius: 11px;
     }
 
+    &__img_active {
+        border: 2px solid $blue;
+    }
+
     &__name {
         font-size: 15px;
         line-height: 15px;
@@ -42,13 +49,13 @@
         padding-top: 11px;
     }
 }
-.buildings {
-    &__types {
-    }
 
-    &__material {
-    }
+.buildings {
+    &__types {}
+
+    &__material {}
 }
+
 .material {
     padding: 30px 15px 0 15px;
     display: grid;
@@ -73,7 +80,13 @@
         text-align: center;
         color: $grey;
     }
+
+    &__item_active {
+        color: $white;
+        background: $blue;
+    }
 }
+
 .style {
     display: flex;
     padding-top: 25px;
@@ -85,7 +98,11 @@
         color: $grey;
         padding-right: 25px;
     }
+    &__item_active {
+        color: $blue;
+    }
 }
+
 .range {
     padding: 40px 15px 0 15px;
 
@@ -93,6 +110,7 @@
         width: 100%;
         padding-top: 25px;
     }
+
     &__numbers {
         display: flex;
         justify-content: space-between;
@@ -110,6 +128,7 @@
         }
     }
 }
+
 // ПОЛЗУНОК!!
 // input[type=range] {
 //     -webkit-appearance: none;
@@ -154,9 +173,7 @@
 // }
 
 .size {
-    &__metres {
-    }
+    &__metres {}
 
-    &__price {
-    }
+    &__price {}
 }

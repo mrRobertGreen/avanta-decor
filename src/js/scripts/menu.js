@@ -26,6 +26,9 @@ const toggleActiveClass = (e, className, activeClassName) => {
 if (window.matchMedia("(max-width: 425px)").matches) {
     enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
 }
+if (window.matchMedia("(max-width: 580px)").matches) {
+    enableMenuScroll("types-row", "types__item", [0, 70, 130, 210])
+}
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, "menu__item", "menu__item_active"))
 $(".types__img").on("click", (e) => toggleActiveClass(e, "types__img", "types__img_active"))
