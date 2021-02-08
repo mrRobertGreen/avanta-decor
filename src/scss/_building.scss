@@ -65,7 +65,6 @@
     }
 
     &__item_active {
-        //background: #000;
         .types__img {
             border: 2px solid $blue;
         }
@@ -179,9 +178,6 @@
         background-color: $blue;
         border: none;
     }
-
-    .selectBtn {
-    }
 }
 
 .size {
@@ -196,6 +192,19 @@
         color: $grey;
         flex: 50%;
         padding-right: 8px;
+
+        // button {
+        //     height: 10px;
+        //     width: 10px;
+        //     background-color: white;
+        //     border: 7px solid transparent;
+        //     border-top: 9px solid $grey;
+        //     border-radius: 3.5px;
+
+        //     position: absolute;
+        //     left: 151px;
+        //     margin-top: 16px;
+        // }
     }
 
     &__input {
@@ -209,8 +218,10 @@
         font-weight: 500;
         font-size: 15px;
         line-height: 15px;
+        margin-left: 5px;
         padding-left: 15px;
         color: #868585;
+        z-index: 10;
     }
 
     /* Chrome, Safari, Edge, Opera */
@@ -225,6 +236,20 @@
         -moz-appearance: textfield;
     }
 
+    &__list {
+        background: #ffffff;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+        position: absolute;
+        right: 250px;
+        z-index: 100;
+        overflow: hidden;
+        height: 140px;
+
+        div {
+            padding: 5px 15px;
+        }
+    }
+
     &__price {
         background: $light-grey;
         border-radius: 11px;
@@ -233,7 +258,9 @@
         flex: 50%;
         display: flex;
         justify-content: center;
+        align-items: center;
         height: 100%;
+        width: 100%;
 
         p {
             font-weight: 500;
@@ -256,10 +283,6 @@
         max-width: 165px;
         grid-area: mat;
         padding-top: 0;
-        // padding-right: 45px;
-
-        &__item {
-        }
     }
     .style {
         display: flex;
@@ -286,11 +309,13 @@
         flex-direction: column;
         grid-area: size;
         padding-top: 0;
+
         &__metres {
             display: flex;
             align-items: center;
+
             input {
-               margin-left: 8px;
+                margin-left: 8px;
             }
         }
     }
@@ -304,8 +329,8 @@
         grid-template-columns: 1fr 2fr 1.2fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas:
-         "mat rng size"
-         "stl rng btn";
+            "mat rng size"
+            "stl rng btn";
 
         max-width: 765px;
         margin: 0 auto;
