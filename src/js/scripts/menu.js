@@ -8,14 +8,13 @@ const enableMenuScroll = (sliderId, itemsClass, stepLengths) => {
         releaseSwing: true,
         swingSpeed: 0.5,
     };
-    slider = new Sly("#" + sliderId, options).init();
+    const slider = new Sly("#" + sliderId, options).init();
 
     $("." + itemsClass).each((idx, item) => {
         $(item).click(() => {
             slider.slideTo(stepLengths[idx])
         })
     })
-    return slider
 }
 
 const toggleActiveClass = (e, className, activeClassName) => {
@@ -25,10 +24,10 @@ const toggleActiveClass = (e, className, activeClassName) => {
 }
 
 if (window.matchMedia("(max-width: 425px)").matches) {
-    const slider = enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
+    enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
 }
 if (window.matchMedia("(max-width: 580px)").matches) {
-    const slider = enableMenuScroll("types-row", "types__item", [0, 70, 130, 210])
+    enableMenuScroll("types-row", "types__item", [0, 70, 130, 210])
 }
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, "menu__item", "menu__item_active"))
