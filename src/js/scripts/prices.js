@@ -134,7 +134,7 @@ const plintusTree = {
 }
 
 const plintusMDF = {
-    finish: {
+    finish: {   
         10: {
             70: 100,
             80: 150,

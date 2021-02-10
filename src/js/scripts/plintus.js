@@ -1,9 +1,10 @@
 class Plintus {
     constructor() {
         this._category = "mdf"
-        this._type = "oak"
+        this._type = "finish"
         this._thickness = 12
         this._height = 70
+        this._metres = 1
     }
     _setPrice = (value) => {
         $(".size__price").html(`<p>${value} ₽</p>`)
@@ -15,6 +16,7 @@ class Plintus {
         } else {
             price = getItemFromTree(plintusMDF, [this._type, this._thickness, this._height])
         }
+        price *= this._metres
         this._setPrice(price)
     }
     setValue(field, value) {
@@ -31,6 +33,9 @@ class Plintus {
             case "height":
                 this._height = value
                 break
+            case "metres":
+                this._metres = value
+                break
             default:
                 return
         }
@@ -38,6 +43,7 @@ class Plintus {
         console.log("type: ", this._type);
         console.log("thickness: ", this._thickness);
         console.log("height: ", this._height);
+        console.log("metres: ", this._metres);
         this._setCorrectPrice()
     }
 }
@@ -62,41 +68,80 @@ $(".style__item").on("click", (e) => {
 const rangeValueToThickness = (value) => {
     switch (+value) {
         case 1:
-            thickness = 12
-            break
+            return 12
         case 3:
-            thickness = 14
-            break
+            return 14
         case 5:
-            thickness = 16
-            break
+            return 16
         case 7:
-            thickness = 18
-            break
+            return 18
         case 9:
-            thickness = 20
-            break
+            return 20
         default:
-            thickness = 12
+            return 12
     }
 }
 
-let prevValue;
+let thicknessPrevValue;
 $("#range-thickness-1").on("input", (e) => {
     let value = +e.target.value
-    prevValue = value
-    console.log(value);
     if (value % 2 === 0) {
-        if (prevValue > value) {
-            $(e.target).val(--value)
-        } else if (value === 10) {
+        if (value === 10) {
             $(e.target).val(value = 9)
+        } else if (value === 0) {
+            $(e.target).val(value = 1)
+        } else if (thicknessPrevValue > value) {
+            $(e.target).val(--value)
         } else {
-            $(e.target).val(+value)
+            $(e.target).val(++value)
         }
-        return
-    } 
+    } else {
+        thicknessPrevValue = value
+    }
 
     const thickness = rangeValueToThickness(value)
     plintus.setValue("thickness", thickness)
+})
+
+const rangeValueToHeight = (value) => {
+    switch (+value) {
+        case 1:
+            return 70
+        case 3:
+            return 80
+        case 5:
+            return 100
+        case 7:
+            return 120
+        case 9:
+            return 150
+        default:
+            return 70
+    }
+}
+
+let heightPrevValue;
+$("#range-height-1").on("input", (e) => {
+    let value = +e.target.value
+    if (value % 2 === 0) {
+        if (value === 10) {
+            $(e.target).val(value = 9)
+        } else if (value === 0) {
+            $(e.target).val(value = 1)
+        } else if (heightPrevValue > value) {
+            $(e.target).val(--value)
+        } else {
+            $(e.target).val(++value)
+        }
+    } else {
+        heightPrevValue = value
+    }
+
+    const height = rangeValueToHeight(value)
+    plintus.setValue("height", height)
+})
+
+$(".size__input").on("input", (e) => {
+    const value = e.target.value
+    plintus.setValue("metres", value)
 })
