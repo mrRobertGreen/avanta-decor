@@ -1,23 +1,54 @@
 .header {
+    padding-top: 30px;
     &__row {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
 
-        .logo {
-            width: 176px;
-            background-color: red;
-
-            div {
-                display: flex;
-                a > img {
+        .mainLogo {
+            &::before {
+                content: url("../img/logo_text_black.png");
+                width: calc(176px + (212 - 176) * (100vw - 320) / (1200 - 320));
+                height: 36px;
+            }
+        }
+        div {
+            a {
+                padding-right: 20px;
+                img {
                     width: 30px;
+                    height: 25px;
                 }
             }
         }
     }
-    .mainLogo {
-        width: 176px;
+}
+.inst {
+    padding-right: 10px;
+}
+.phone {
+    display: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 17px;
+    text-align: center;
+    color: $grey;
+}
+
+@media (min-width: 800px) {
+    .header {
+        &__row {
+            .mainLogo {
+                width: calc(176px + (212 - 176) * (100vw - 320) / (1200 - 320));
+            }
+            div {
+                a {
+                    img {
+                        width: 30px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
     }
 }
