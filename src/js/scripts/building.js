@@ -1,8 +1,17 @@
-$(".range__input").on("input", (e) => {
-    console.log(e.target.value);
-    setPrice(e.target.value)
+const chahgeSubmitButtonText = () => {
+    if (window.matchMedia("(min-width: 820px)").matches) {
+        $(".building__btn").html("Отправить")
+    }
+}
+$(".material__item").on("click", (e) => {
+    const target = $(e.target)
+    if (target.attr("id") === "mdf") {
+        $(".building__style").removeClass("_hidden")
+    } else {
+        $(".building__style").addClass("_hidden")
+    }
 })
 
-const setPrice = (value) => {
-    $(".size__price").html(value+"₽") 
-}
+chahgeSubmitButtonText()
+
+$(window).resize(chahgeSubmitButtonText)

@@ -26,7 +26,7 @@ const toggleActiveClass = (e, className, activeClassName) => {
 if (window.matchMedia("(max-width: 425px)").matches) {
     enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
 }
-if (window.matchMedia("(max-width: 580px)").matches) {
+if (window.matchMedia("(max-width: 730px)").matches) {
     enableMenuScroll("types-row", "types__item", [0, 70, 130, 210])
 }
 

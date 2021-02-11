@@ -134,7 +134,7 @@ const plintusTree = {
 }
 
 const plintusMDF = {
-    finish: {
+    finish: {   
         10: {
             70: 100,
             80: 150,
@@ -226,12 +226,6 @@ const plintusMDF = {
     }
 }
 
-const getPlintusTreePrice = (params) => { // params = [tree, thickness, height]
-    return getItemFromTree(plintusTree, params)
-}
-const getPlintusMDFPrice = (params) => { // params = [type, thickness, height]
-    return getItemFromTree(plintusMDF, params)
-}
 
 const getItemFromTree = (tree, keys, idx = 0) => {
     if (idx === keys.length - 1 || tree[keys[idx]] === undefined) {
