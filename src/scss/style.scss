@@ -13,9 +13,19 @@
 body {
   width: 100%;
   overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .wrapper {
   width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@media (min-width: 900px) {
+  .main-screen {
+    height: 100vh;
+  }
 }

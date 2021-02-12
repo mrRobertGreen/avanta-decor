@@ -6,8 +6,10 @@
 <body id="body">
   <div class="wrapper">
     @@include("./html/_circle.html", {})
-    @@include("./html/_header.html", {})
-    @@include("./html/_products.html", {})
+    <div class="main-screen">
+      @@include("./html/_header.html", {})
+      @@include("./html/_products.html", {})
+    </div>
     @@include("./html/_discounts.html", {})
     @@include("./html/_menu.html", {})
     @@include("./html/_forms.html", {
