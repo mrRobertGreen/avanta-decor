@@ -2,6 +2,10 @@
 
 .products {
     padding: 70px 15px 0 15px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 94px;
+    height: 100vh;
 
     .mainText {
         padding: 0 15px;

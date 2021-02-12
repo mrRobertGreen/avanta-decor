@@ -1,15 +1,17 @@
-.circle {
-    // width: 1656px;
-    // height: 1656px;
-    // width: 100px;
-    // height: 100px;
-    div {
-        background-color: $blue;
-        width: 1656px;
-        height: 1656px;
-        border-radius: 950px;
-        position: absolute;
-        top: -810px;
-        left: -800px;
+@media (min-width: 900px) {
+    .circle {
+        // width: 1656px;
+        // height: 1656px;
+        z-index: 1;
+        position: relative;
+        div {
+            background-color: $blue;
+            width: 1200px;
+            height: 1200px;
+            border-radius: 800px;
+            position: absolute;
+            top: -220px;
+            left: -740px;
+        }
     }
 }
