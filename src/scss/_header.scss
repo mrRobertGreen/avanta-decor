@@ -21,6 +21,7 @@
         display: flex;
         justify-content: space-around;
         min-width: 60px + 75px;
+
         a {
             img {
                 width: 30px;
@@ -33,6 +34,7 @@
 .inst {
     display: none;
 }
+
 .phone {
     display: none;
     font-weight: 500;
@@ -43,34 +45,39 @@
 }
 
 @media (min-width: 900px) {
+
     .phone-pic {
         display: none;
     }
+
     .phone {
         display: inline-block;
         margin-left: 45px;
         padding-top: 9px;
     }
+
     .inst {
         display: inline-block;
         padding-top: -20px;
     }
-    .mainLogo {
-        &__white {
-            width: 211px;
-            display: inline-block;
-        }
-
-        &__black {
-            display: none;
-        }
-    }
     .header {
         padding-top: 33px;
+
+        .mainLogo {
+            &__white {
+                width: 211px;
+                display: inline-block;
+            }
+
+            &__black {
+                display: none;
+            }
+        }
 
         div {
             display: flex;
             justify-content: start;
+
             a {
                 img {
                     width: 30px;
@@ -79,7 +86,7 @@
             }
 
             // контейнер для левых соц сетей
-            div  {
+            div {
                 a {
                     padding-right: 20px;
                 }
