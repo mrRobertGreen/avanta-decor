@@ -2,48 +2,82 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: red;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.6);
 
 	&__body {
 		background-color: $white;
+		border-radius: 11px;
+		max-width: 400px;
+		width: calc(300px + 100 * (100vw - 320px) / (1600 - 210));
 	}
 
 	&__content {
-
+		padding: 55px 24px 45px 24px;
 	}
 
 	&__title {
+		font-size: 30px;
+		line-height: 20px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		color: #2f2f2f;
 	}
 
 	&__subtitle {
+		font-size: 17px;
+		line-height: 25px;
+		text-align: center;
+		margin: 0 auto;
+		color: $dark-grey;
+		width: 257px;
+		padding-top: 30px;
 	}
 
 	&__soc-media {
+		// margin: 0 24%;
+		display: flex;
+		padding-top: 20px;
+		width: 120px;
+		margin: 0 auto;
 	}
 
 	&__send-wrapper {
 		display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        width: 100%;
+		align-items: flex-end;
+		justify-content: center;
+		width: 100%;
 	}
 
 	&__send {
 		margin: 30px 15px 0 15px;
-        max-height: 40px;
-        height: 40px;
-        width: 100%;
+		max-height: 40px;
+		height: 40px;
+		width: 100%;
 
-        background: $blue;
-        border-radius: 11px;
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 15px;
+		background-color: $blue;
+		border-radius: 11px;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 15px;
 
-        color: $white;
-        text-align: center;
-        padding: 12px 0;
+		color: $white;
+		text-align: center;
+		padding: 12px 0;
 	}
 }
 .pic {
+	margin-right: 20px;
+	img {
+		width: 25px;
+		height: 25px;
+	}
+}
+.number {
+	color: $blue;
 }
