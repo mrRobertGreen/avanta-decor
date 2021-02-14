@@ -73,7 +73,7 @@
                 font-size: 17px;
                 line-height: 20px;
                 text-align: left;
-                width: 100%;
+                // width: 345px;
                 color: $black;
                 height: 125px;
                 display: flex;
@@ -125,6 +125,13 @@
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-around;
+        .mainText {
+            flex: 40%;
+        }
+        .blocks {
+            padding-right: 15px;
+            flex: 40%;
+        }
     }
 }
 
@@ -165,7 +172,6 @@
 @media (min-width: 1100px) {
     .products {
         .mainText {
-            font-family: Roboto;
             font-weight: bold;
             font-size: 35px;
             line-height: 50px;
