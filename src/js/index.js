@@ -6,4 +6,5 @@ $(window).on("load", function () {
 @@include("./scripts/plintus.js")
 @@include("./scripts/prices.js")
 @@include("./scripts/range.js")
+@@include("./scripts/popups.js")
 })

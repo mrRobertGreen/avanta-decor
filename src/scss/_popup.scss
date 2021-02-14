@@ -7,6 +7,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 999;
 
 	&__body {
 		background-color: $white;
@@ -44,6 +45,7 @@
 		width: 120px;
 		margin: 0 auto;
 	}
+
 	&__button-wrapper {
 		display: flex;
 		flex-direction: column;
@@ -51,11 +53,13 @@
 		align-items: center;
 		padding-top: 30px;
 	}
+
 	&__input-wrapper {
 		width: 260px;
 		height: 40px;
 		margin-bottom: 20px;
 	}
+
 	&__input {
 		background-color: $light-grey;
 		width: 100%;
@@ -64,7 +68,30 @@
 		padding-left: 15px;
 		font-size: 15px;
 		line-height: 15px;
-		color: $grey;
+		// color: $grey;
+		color: $black;
+
+		&::-webkit-input-placeholder {
+			/* Chrome */
+			color: $grey;
+		}
+
+		&:-ms-input-placeholder {
+			/* IE 10+ */
+			color: $grey;
+		}
+
+		&::-moz-placeholder {
+			/* Firefox 19+ */
+			color: $grey;
+			opacity: 1;
+		}
+
+		&:-moz-placeholder {
+			/* Firefox 4 - 18 */
+			color: $grey;
+			opacity: 1;
+		}
 	}
 
 	&__send-wrapper {
@@ -86,11 +113,13 @@
 
 .pic {
 	margin-right: 20px;
+
 	img {
 		width: 25px;
 		height: 25px;
 	}
 }
+
 .number {
 	color: $blue;
 }
