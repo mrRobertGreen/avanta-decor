@@ -4,7 +4,6 @@
     position: relative;
     z-index: 1;
     margin-bottom: 94px;
-    // height: calc(100vh - 69px);
 
     .mainText {
         padding: 0 15px;
@@ -125,6 +124,8 @@
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-around;
+        padding: 90px 30px 0 30px;
+
         .mainText {
             flex: 40%;
         }
@@ -171,12 +172,16 @@
 
 @media (min-width: 1100px) {
     .products {
+        
+        
         .mainText {
             font-weight: bold;
             font-size: 35px;
             line-height: 50px;
             color: $black;
             max-width: 521px;
+            padding: 0;
+            
 
             .delivery {
                 padding-top: 22px;
@@ -189,6 +194,7 @@
                 padding-top: 42px;
 
                 &__connection {
+                    align-items: center;
                     &__button {
                         align-items: center;
                         padding: 12px 65px 10px;
@@ -202,11 +208,11 @@
 
                 &__download {
                     padding-left: 41px;
-
+                    display: flex;
+                    
                     ._button {
                         font-size: 15px;
                         line-height: 15px;
-                        
                         color: $dark-grey;
                     }
                 }

@@ -76,6 +76,11 @@
         }
     }
 }
+@media (min-width: 700px) {
+    .header {
+        padding: 33px 30px 0 30px;
+    }
+}
 
 @media (min-width: 900px) {
     .phone-pic {
@@ -93,7 +98,7 @@
         padding-top: -20px;
     }
     .header {
-        padding-top: 33px;
+        
 
         .mainLogo {
             &__white {
