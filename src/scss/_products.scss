@@ -1,9 +1,8 @@
-
 .products {
     padding: 70px 15px 0 15px;
     position: relative;
     z-index: 1;
-    margin-bottom: 94px;
+    margin-bottom: 45px;
 
     .mainText {
         padding: 0 15px;
@@ -60,6 +59,7 @@
         grid-gap: 15px;
         max-width: 380px;
         min-width: 295px;
+        
 
         .container {
             background: $white;
@@ -120,15 +120,18 @@
 
 @media (min-width: 700px) {
     .products {
+        width: 100%;
         display: flex;
         align-items: center;
         flex-direction: row-reverse;
-        justify-content: space-around;
-        padding: 90px 30px 0 30px;
+        height: 100%;
+        padding: 95px 30px;
+        margin-bottom: 0;  
 
         .mainText {
             flex: 40%;
         }
+
         .blocks {
             padding-right: 15px;
             flex: 40%;
@@ -171,9 +174,10 @@
 }
 
 @media (min-width: 1100px) {
+    
     .products {
-        
-        
+        height: calc(100vh - 66px);
+
         .mainText {
             font-weight: bold;
             font-size: 35px;
@@ -181,7 +185,7 @@
             color: $black;
             max-width: 521px;
             padding: 0;
-            
+
 
             .delivery {
                 padding-top: 22px;
@@ -190,11 +194,13 @@
                 line-height: 20px;
                 color: $dark-grey;
             }
+
             .connect {
                 padding-top: 42px;
 
                 &__connection {
                     align-items: center;
+
                     &__button {
                         align-items: center;
                         padding: 12px 65px 10px;
@@ -209,7 +215,7 @@
                 &__download {
                     padding-left: 41px;
                     display: flex;
-                    
+
                     ._button {
                         font-size: 15px;
                         line-height: 15px;
@@ -220,4 +226,3 @@
         }
     }
 }
-
