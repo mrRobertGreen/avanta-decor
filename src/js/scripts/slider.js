@@ -9,5 +9,7 @@ $('.discounts__slider').slick({
     focusOnSelect: true,
     swipe: true,
     touchMove: true,
-    variableWidth: true
+    variableWidth: true,
+    cssEase: 'ease-out',
+    speed: 800
 })
