@@ -63,6 +63,7 @@
         margin-right: 15px;
         display: flex;
         flex-direction: column;
+        cursor: pointer;
 
         @media (min-width: 730px) {
             &:last-child {
@@ -115,6 +116,7 @@
         background: $light-grey;
         border-radius: 11px;
         max-width: 172px;
+        cursor: pointer;
 
         //Взято из фигмы
         display: flex;
@@ -146,9 +148,13 @@
         line-height: 15px;
         color: $grey;
         padding-right: 25px;
+        span {
+            cursor: pointer;
+        }
+        
     }
 
-    &__item_active {
+    &__span_active {
         color: $blue;
     }
 }
@@ -210,6 +216,7 @@
         transform: translateY(-9px);
         background-color: $blue;
         border: none;
+        cursor: pointer;
     }
 }
 
@@ -271,7 +278,6 @@
     &__price {
         background: $light-grey;
         border-radius: 11px;
-        //max-width: 360px;
         flex: 50%;
         display: flex;
         justify-content: center;

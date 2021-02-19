@@ -37,14 +37,20 @@
             <div class="material__item" id="ash">Ясень</div>
         </div>
         <div class="building__style style">
-            <div class="style__item style__item_active" id="finish">Финишная пленка</div>
-            <div class="style__item" id="veneer">Шпон</div>
-            <div class="style__item" id="dyed">Выкрашенный</div>
+            <div class="style__item" >
+                <span id="finish" class="style__span style__span_active">Финишная пленка</span> 
+            </div>
+            <div class="style__item">
+                <span  id="veneer" class="style__span">Шпон</span>
+            </div>
+            <div class="style__item">
+                <span id="dyed" class="style__span">Выкрашенный</span>
+            </div>
         </div>
         <div class="building__dimensions">
             <div class="range">
                 <div class="range__title">
-                    Высота: <span>мм.</span>
+                    Высота: <span id="height-mm">мм.</span>
                 </div>
                 <input type="range" class="range__input " value="5" min="0" max="10" id="range-height-1">
                 <div class="range__numbers">
@@ -57,7 +63,7 @@
             </div>
             <div class="range" id="thickness">
                 <div class="range__title">
-                    Толщина: <span>мм.</span>
+                    Толщина: <span id="thickness-mm">мм.</span>
                 </div>
                 <input type="range" class="range__input" value="5" min="0" max="10" id="range-thickness-1">
                 <div class="range__numbers">

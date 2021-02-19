@@ -33,4 +33,4 @@ if (window.matchMedia("(max-width: 730px)").matches) {
 $(".menu__item").on("click", (e) => toggleActiveClass(e, "menu__item", "menu__item_active"))
 $(".types__item").on("click", (e) => toggleActiveClass(e, "types__item", "types__item_active"))
 $(".material__item").on("click", (e) => toggleActiveClass(e, "material__item", "material__item_active"))
-$(".style__item").on("click", (e) => toggleActiveClass(e, "style__item", "style__item_active"))
+$(".style__span").on("click", (e) => toggleActiveClass(e, "style__span", "style__span_active"))

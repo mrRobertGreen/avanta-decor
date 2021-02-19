@@ -60,7 +60,7 @@ $(".material__item").on("click", (e) => {
         plintus.setValue("category", "tree")
     }
 })
-$(".style__item").on("click", (e) => {
+$(".style__span").on("click", (e) => {
     const type = $(e.target).attr("id")
     plintus.setValue("type", type)
 })
@@ -100,6 +100,7 @@ $("#range-thickness-1").on("input", (e) => {
     }
 
     const thickness = rangeValueToThickness(value)
+    $("#thickness-mm").html(thickness + " мм.")
     plintus.setValue("thickness", thickness)
 })
 
@@ -136,8 +137,8 @@ $("#range-height-1").on("input", (e) => {
     } else {
         heightPrevValue = value
     }
-
     const height = rangeValueToHeight(value)
+    $("#height-mm").html(height + " мм.")
     plintus.setValue("height", height)
 })
 
