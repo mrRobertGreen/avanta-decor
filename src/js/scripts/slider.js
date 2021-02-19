@@ -11,5 +11,6 @@ $('.discounts__slider').slick({
     touchMove: true,
     variableWidth: true,
     cssEase: 'ease-out',
-    speed: 800
+    speed: 400,
+    useCSS: false
 })
