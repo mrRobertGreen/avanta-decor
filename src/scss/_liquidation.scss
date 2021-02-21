@@ -39,7 +39,7 @@
             .grey {
                 width: 148px;
                 height: 144px;
-                background: #ecf2f6;
+                background: $light-grey;
                 border-radius: 100px;
                 justify-self: center;
                 margin-left: 125px;
@@ -107,11 +107,11 @@
                     text-align: center;
                     padding: 12px 33px;
 
-                    color: #ffffff;
+                    color: $white;
                 }
             }
             .contact {
-                background: #ecf2f6;
+                background: $light-grey;
                 border-radius: 25px;
                 div {
                     font-size: 17px;
@@ -120,7 +120,7 @@
                     display: flex;
                     align-items: center;
                     text-align: center;
-                    color: #abb0bd;
+                    color: $grey;
                 }
             }
         }
