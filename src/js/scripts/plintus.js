@@ -90,10 +90,13 @@ $("#range-thickness-1").on("input", (e) => {
             $(e.target).val(value = 9)
         } else if (value === 0) {
             $(e.target).val(value = 1)
+            // setAnimateRangeValue($(e.target), thicknessPrevValue, value = 1)
         } else if (thicknessPrevValue > value) {
             $(e.target).val(--value)
+            // setAnimateRangeValue($(e.target), thicknessPrevValue, --value)
         } else {
             $(e.target).val(++value)
+            // setAnimateRangeValue($(e.target), thicknessPrevValue, ++value)
         }
     } else {
         thicknessPrevValue = value
@@ -126,6 +129,7 @@ $("#range-height-1").on("input", (e) => {
     let value = +e.target.value
     if (value % 2 === 0) {
         if (value === 10) {
+            setAnimateRangeValue()
             $(e.target).val(value = 9)
         } else if (value === 0) {
             $(e.target).val(value = 1)
@@ -141,8 +145,11 @@ $("#range-height-1").on("input", (e) => {
     $("#height-mm").html(height + " мм.")
     plintus.setValue("height", height)
 })
-
 $(".size__input").on("input", (e) => {
     const value = e.target.value
     plintus.setValue("metres", value)
 })
+
+const setAnimateRangeValue = (range, prevValue, nextValue) => {
+    
+}
