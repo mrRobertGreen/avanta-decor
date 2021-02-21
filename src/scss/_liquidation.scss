@@ -6,8 +6,14 @@
         justify-content: center;
 
         &__pics {
-            // flex: 35%;
             margin-right: 160px;
+            display: flex;
+            flex-direction: column;
+        }
+        .circle-container {
+            display: flex;
+            flex-direction: row;
+            padding-top: 56px;
         }
         &__product {
             position: relative;
@@ -15,22 +21,27 @@
             .plinth {
                 height: 221px;
                 position: absolute;
+                top: -60px;
+                left: 163px;
             }
             .trim {
                 height: 209px;
                 position: absolute;
+                top: -48px;
+                left: 27px;
             }
             .slats {
                 height: 292px;
                 position: absolute;
-            }
-            .circle {
+                top: -70px;
             }
             .grey {
                 width: 148px;
                 height: 144px;
                 background: #ecf2f6;
                 border-radius: 100px;
+                justify-self: center;
+                margin-left: 125px;
             }
             .pink {
                 width: 138px;
@@ -43,6 +54,8 @@
                 border-radius: 250px;
                 width: 168px;
                 height: 171px;
+                margin-top: 30px;
+                margin-right: 89px;
             }
         }
         &__text {
