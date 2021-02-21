@@ -47,11 +47,11 @@
             .pink {
                 width: 138px;
                 height: 140px;
-                background: #fbd9fb;
+                background: $pink;
                 border-radius: 100px;
             }
             .yellow {
-                background: #feffc0;
+                background: $yellow;
                 border-radius: 250px;
                 width: 168px;
                 height: 171px;
@@ -71,10 +71,10 @@
             font-weight: bold;
             font-size: 40px;
             line-height: 47px;
-            color: #292930;
+            color: $dark;
 
             span {
-                color: $blue;
+                color: $dark-blue;
             }
             padding-top: 12px;
         }
@@ -83,17 +83,15 @@
             font-size: 20px;
             line-height: 27px;
             width: 518px;
-            color: #abb0bd;
+            color: $grey;
         }
         &__buttons {
             display: flex;
             padding-top: 35px;
             align-items: center;
-            // width: 245px;
-            // justify-content: space-between;
 
             .catalog {
-                background: #0095f6;
+                background: $dark-blue;
                 border-radius: 25px;
                 margin-right: 15px;
 

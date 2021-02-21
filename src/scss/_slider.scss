@@ -38,8 +38,8 @@
         font-size: 15px;
         font-weight: 600;
         display: inline-block;
-        color: $white;
-        //background-color: $pink;
+        // color: $white;
+        background-color: $pink;
         padding: 12px 18px;
         border-radius: 142px;
         margin-bottom: 19px;
@@ -72,23 +72,25 @@
 
     /* Слайд */
     .slick-slide {
-        opacity: 0.45;
-        padding: 14px;
+        // padding: 37px;
+        background-color: $pink;
+        max-width: 387px;
+        max-height: 387px;
+        border-radius: 25px;
+        margin: 0 37px;
     }
 
     /* Слайд активный (показывается) */
     .slick-slide.slick-active {
-        opacity: 1;
+
     }
 
     /* Слайд основной */
     .slick-slide.slick-current {
-        opacity: 1;
     }
 
     /* Слайд по центру */
     .slick-slide.slick-center {
-        opacity: 1;
     }
 
     /* Клонированный слайд */
@@ -115,26 +117,28 @@
     .slick-dots {
         @include flex-row;
         align-items: flex-end;
-        max-height: 7px;
-        padding-top: 45px;
-        margin-bottom: 45px;
+        max-height: 11px;
+        padding-top: 55px;
+        // margin-bottom: 45px;
     }
 
     .slick-dots li {
+        // color: #ABB0BD;
     }
 
     /* Активная точка */
     .slick-dots li.slick-active button {
         //background-color: $yellow;
-        background: $blue;
+        background: #292930;
     }
 
     /* Элемент точки */
     .slick-dots li button {
         margin: 0 0 0 7px;
         font-size: 0;
-        width: 7px;
-        height: 7px;
+        width: 11px;
+        height: 11px;
+        background: #ABB0BD;    
         border-radius: 50%;
     }
 
@@ -157,8 +161,8 @@
         }
         .slick-slide {
             display: block;
-            width: 469px;
-            height: 469px;
+            width: 387px;
+            height: 387px;
             
             img {
                 width: 100%;

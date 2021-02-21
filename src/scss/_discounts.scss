@@ -1,16 +1,23 @@
 .discounts {
-    background: $blue-black;
-    // padding-top: 94px;
+    background: $white;
+    padding-top: 101px;
     position: relative;
     z-index: 100;
 
     &__header {
-        padding: 55px 0;
         font-weight: bold;
         font-size: 30px;
         line-height: 20px;
         text-align: center;
 
-        color: $white;
+        color: #000;
+    }
+    &__slider {
+        padding-top: 55px;
+        // div {
+        //     div {
+        //         background-color: $pink;
+        //     }
+        // }
     }
 }

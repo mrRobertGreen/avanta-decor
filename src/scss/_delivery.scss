@@ -1,0 +1,25 @@
+.delivery {
+    padding-top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__pic {
+        width: 437.92px;
+        height: 212.16px;
+    }
+    &__text {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 47px;
+        color: $dark;
+    }
+    &__subtitle {
+        font-size: 20px;
+        line-height: 27px;
+        font-weight: normal;
+        color: $grey;
+        width: 377px;
+        padding-top: 25px;
+    }
+}
