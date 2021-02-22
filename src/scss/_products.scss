@@ -29,7 +29,7 @@
         font-size: 16px;
         line-height: 23px;
         color: $grey;
-        max-width: 197px;
+        width: 197px;
     }
 }
 .blue {
@@ -43,6 +43,12 @@
 }
 .del {
     width: 158px;
+}
+.quar {
+    width: 71px;
+}
+.comp {
+    width: 197px;
 }
 
 @media (min-width: 1250px) {

@@ -22,4 +22,34 @@
         width: 377px;
         padding-top: 25px;
     }
+    &__buttons {
+        padding-top: 38px;
+    }
+    &__phone {
+        background: $light-grey;
+        border-radius: 25px;
+        width: 295px;
+        height: 45px;
+        padding-left: 26px;
+        padding-right: 62px;
+        font-size: 17px;
+        line-height: 15px;
+        color: $grey;
+    }
+    &__connect {
+        background: $dark-blue;
+        border-radius: 25px;
+        width: 210px;
+        height: 45px;
+        
+        text-align: center;
+
+        div {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 23px;
+
+            color: $white;
+        }
+    }
 }
