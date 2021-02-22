@@ -1,5 +1,5 @@
 .building {
-    padding-top: 105px;
+    padding-top: 191px;
 
     &__title {
         padding: 0 15px;
@@ -30,7 +30,7 @@
         height: 40px;
         width: 100%;
 
-        background: $blue;
+        background: $dark-blue;
         border-radius: 11px;
         font-weight: 500;
         font-size: 15px;
@@ -87,7 +87,7 @@
         }
 
         .types__img {
-            border: 2px solid $blue;
+            border: 2px solid $dark-blue;
         }
     }
 
@@ -134,7 +134,7 @@
 
     &__item_active {
         color: $white;
-        background: $blue;
+        background: $dark-blue;
     }
 }
 
@@ -155,7 +155,7 @@
     }
 
     &__span_active {
-        color: $blue;
+        color: $dark-blue;
     }
 }
 
@@ -214,7 +214,7 @@
         /* round button */
         border-radius: 50%;
         transform: translateY(-9px);
-        background-color: $blue;
+        background-color: $dark-blue;
         border: none;
         cursor: pointer;
     }
