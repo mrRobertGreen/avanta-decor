@@ -26,8 +26,16 @@ body {
   position: relative;
 }
 
+._slide {
+  background: $white;
+}
+
 @media (min-width: 900px) {
   .main-screen {
     height: 100vh;
+    // position: fixed;
+    // background: #000;
+    // top: 0;
+    // z-index: -1;
   }
 }
