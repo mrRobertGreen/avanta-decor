@@ -23,14 +23,23 @@ body {
 .wrapper {
   width: 100%;
   max-width: 1360px;
-  padding: 0 64px;
+  padding: 0 15px;
   margin: 0 auto;
   position: relative;
   background: $white;
 }
+.main-screen {
+  position: static;
+  width: 100%;
+}
 
 
-@media (min-width: 900px) {
+@media (min-width: 500px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1250px) {
   .main-screen {
     height: 100vh;
     position: fixed;
@@ -39,4 +48,9 @@ body {
     left: calc(50% - 680px);
     z-index: -1;
   }
+  .wrapper {
+    padding: 0 63px;
+  }
 }
+
+

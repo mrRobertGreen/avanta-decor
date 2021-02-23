@@ -1,14 +1,137 @@
-@media (min-width: 1250px) {
-    .scroll-me {
-        position: absolute;
-        bottom: 5vh;
-        width: 34px;
-        left: calc(50% - 17px);
+.liquidation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__pics {
+        display: flex;
+        margin: 0 auto;
+        flex-direction: column;
+        margin: 120px auto 60px;
     }
+
+    .circle-container {
+        display: flex;
+        flex-direction: row;
+        padding-top: 56px;
+    }
+
+    &__product {
+        position: relative;
+
+        .plinth {
+            height: 221px;
+            position: absolute;
+            top: -60px;
+            left: 163px;
+        }
+
+        .trim {
+            height: 209px;
+            position: absolute;
+            top: -48px;
+            left: 27px;
+        }
+
+        .slats {
+            height: 292px;
+            position: absolute;
+            top: -51px;
+            left: 37px;
+        }
+
+        .grey {
+            width: 148px;
+            height: 144px;
+            background: $light-grey;
+            border-radius: 100px;
+            justify-self: center;
+            margin-left: 125px;
+        }
+
+        .pink {
+            width: 138px;
+            height: 140px;
+            background: $pink;
+            border-radius: 100px;
+        }
+
+        .yellow {
+            background: $yellow;
+            border-radius: 250px;
+            width: 168px;
+            height: 171px;
+            margin-top: 30px;
+            margin-right: 89px;
+        }
+    }
+
+    &__text {
+        padding: 0 15px;
+    }
+
+    &__pretitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        color: rgba(171, 176, 189, 0.5);
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 33px;
+        color: $dark;
+
+        span {
+            color: $dark-blue;
+        }
+
+        padding-top: 12px;
+    }
+
+    &__subtitle {
+        padding-top: 25px;
+        font-size: 15px;
+        line-height: 27px;
+        // width: 518px;
+        color: $grey;
+    }
+
+    &__btn {
+        border-radius: 25px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 15px;
+        flex: 1 1 50%;
+        width: 210px;
+        height: 45px;
+    }
+
+    &__buttons {
+        display: flex;
+        padding-top: 35px;
+        align-items: center;
+
+        .catalog {
+            background: $dark-blue;
+            margin-right: 15px;
+            color: $white;
+        }
+
+        .contact {
+            background: $light-grey;
+            color: $grey;
+        }
+    }
+}
+
+@media (min-width: 1150px) {
     .liquidation {
         position: relative;
         height: 100%;
         display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
 
@@ -17,11 +140,13 @@
             display: flex;
             flex-direction: column;
         }
+
         .circle-container {
             display: flex;
             flex-direction: row;
             padding-top: 56px;
         }
+
         &__product {
             position: relative;
 
@@ -31,18 +156,21 @@
                 top: -60px;
                 left: 163px;
             }
+
             .trim {
                 height: 209px;
                 position: absolute;
                 top: -48px;
                 left: 27px;
             }
+
             .slats {
                 height: 292px;
                 position: absolute;
                 top: -51px;
                 left: 37px;
             }
+
             .grey {
                 width: 148px;
                 height: 144px;
@@ -51,12 +179,14 @@
                 justify-self: center;
                 margin-left: 125px;
             }
+
             .pink {
                 width: 138px;
                 height: 140px;
                 background: $pink;
                 border-radius: 100px;
             }
+
             .yellow {
                 background: $yellow;
                 border-radius: 250px;
@@ -66,14 +196,16 @@
                 margin-right: 89px;
             }
         }
-        &__text {
-        }
+
+        &__text {}
+
         &__pretitle {
             font-weight: 500;
             font-size: 25px;
             line-height: 47px;
             color: rgba(171, 176, 189, 0.5);
         }
+
         &__title {
             font-weight: bold;
             font-size: 40px;
@@ -83,8 +215,10 @@
             span {
                 color: $dark-blue;
             }
+
             padding-top: 12px;
         }
+
         &__subtitle {
             padding-top: 25px;
             font-size: 20px;
@@ -92,6 +226,7 @@
             width: 518px;
             color: $grey;
         }
+
         &__buttons {
             display: flex;
             padding-top: 35px;
@@ -115,9 +250,11 @@
                     color: $white;
                 }
             }
+
             .contact {
                 background: $light-grey;
                 border-radius: 25px;
+
                 div {
                     font-size: 17px;
                     line-height: 23px;

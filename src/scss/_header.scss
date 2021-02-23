@@ -1,25 +1,96 @@
 .header {
-    background: $white;
-    z-index: 10;
-    margin-top: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+
     &__logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 112px;
+            height: 82px;
+        }
     }
 
     &__main-text {
+        p {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 23px;
+            color: $dark;
+        }
+
+        div {
+            padding-top: 11px;
+            font-size: 17px;
+            line-height: 23px;
+            color: $grey;
+        }
     }
 
     &__buttons {
+        display: flex;
+        align-items: center;
+    }    
+}
+
+.big-btn {
+    display: none;
+    background: $light-grey;
+    border-radius: 25px;
+
+    font-size: 16px;
+    line-height: 23px;
+    color: $grey;
+    padding: 11px 40px;
+
+}
+
+.small-btn {
+    background: $light-grey;
+    border-radius: 25px;
+    padding: 10px;
+    margin-right: 15px;
+}
+
+.telegram {
+    padding: 14px 12px 13px 9.5px;
+}
+
+.des {
+    display: none;
+    margin-right: 21px;
+}
+.tel {
+    display: none;
+}
+.tel-link {
+    display: inline-block;
+}
+.inst-link {
+    display: none;
+}
+
+@media (min-width: 830px) {
+    .tel-link {
+        display: none;
+    }
+    .inst-link {
+        display: inline-block;
+    }
+    .header {
+        .tel {
+            display: block;
+        }
     }
 }
-.big-btn {
-}
-.small-btn {
-}
-.phone {
-}
+
 
 @media (min-width: 1250px) {
     .header {
+        margin-top: 100vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -28,6 +99,7 @@
         &__logo {
             display: flex;
             align-items: center;
+
             img {
                 width: 112px;
                 height: 82px;
@@ -41,6 +113,7 @@
                 line-height: 23px;
                 color: $dark;
             }
+
             div {
                 padding-top: 11px;
                 font-size: 17px;
@@ -54,6 +127,7 @@
             align-items: center;
         }
     }
+
     .big-btn {
         background: $light-grey;
         border-radius: 25px;
@@ -64,16 +138,20 @@
         padding: 11px 40px;
 
     }
+
     .small-btn {
         background: $light-grey;
         border-radius: 25px;
         padding: 10px;
         margin-right: 15px;
     }
+
     .telegram {
         padding: 14px 12px 13px 9.5px;
     }
+
     .des {
+        display: block;
         margin-right: 21px;
     }
 }
