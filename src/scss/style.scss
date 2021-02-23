@@ -25,18 +25,17 @@ body {
   padding: 0 64px;
   margin: 0 auto;
   position: relative;
-}
-
-._slide {
   background: $white;
 }
+
 
 @media (min-width: 900px) {
   .main-screen {
     height: 100vh;
-    // position: fixed;
-    // background: #000;
-    // top: 0;
-    // z-index: -1;
+    position: fixed;
+    width: 1360px;
+    top: 0;
+    left: calc(50% - 680px);
+    z-index: -1;
   }
 }
