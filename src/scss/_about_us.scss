@@ -1,0 +1,31 @@
+.about-us {
+    padding-top: 150px;
+
+    &__container {
+        background: $blue;
+        border-radius: 25px;
+        height: 365px;
+        padding: 67px 130px 64px 130px;
+        display: flex;
+    }
+
+    &__pic {
+        flex: 0 0 50%;
+    }
+
+    &__text {
+        flex: 0 0 50%;
+        p {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+            color: $dark;
+        }
+        div {
+            padding-top: 32px;
+            font-size: 20px;
+            line-height: 27px;
+            color: $grey;
+        }
+    }
+}
