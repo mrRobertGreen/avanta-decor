@@ -11,11 +11,14 @@
         margin: 0 auto;
     }
 
-    &__style {}
+    &__style {
+    }
 
-    &__dimensions {}
+    &__dimensions {
+    }
 
-    &__size {}
+    &__size {
+    }
 
     &__btn-wrapper {
         display: flex;
@@ -40,6 +43,11 @@
         text-align: center;
         padding: 12px 0;
     }
+    &__circle {
+        width: 126px;
+        height: 126px;
+        border-radius: 100px;
+    }
 }
 
 .types {
@@ -53,6 +61,7 @@
 
     &__track {
         display: flex;
+        padding-top: 81px;
 
         @media (min-width: 730px) {
             margin: 0 auto;
@@ -73,17 +82,24 @@
     }
 
     &__img {
-        background-color: $light-grey;
-        border-radius: 11px;
-        width: calc(125px + (173 - 125) * (100vw - 320px) / (820 - 320));
-        height: calc(125px + (173 - 125) * (100vw - 320px) / (820 - 320));
-        max-width: 173px;
-        max-height: 173px;
+        // background-color: $light-grey;
+        // border-radius: 11px;
+        // width: calc(125px + (173 - 125) * (100vw - 320px) / (820 - 320));
+        // height: calc(125px + (173 - 125) * (100vw - 320px) / (820 - 320));
+        // max-width: 173px;
+        // max-height: 173px;
+        position: relative;
+        img {
+            position: absolute;
+            top: -60px;
+            left: 27px;
+        }
     }
 
     &__item_active {
         .types__name {
             color: $black;
+            padding-top: 54px;
         }
 
         .types__img {
@@ -101,9 +117,11 @@
 }
 
 .buildings {
-    &__types {}
+    &__types {
+    }
 
-    &__material {}
+    &__material {
+    }
 }
 
 .material {
@@ -151,7 +169,6 @@
         span {
             cursor: pointer;
         }
-        
     }
 
     &__span_active {
@@ -332,7 +349,8 @@
         padding: 0;
     }
 
-    .types {}
+    .types {
+    }
 
     .size {
         flex-direction: column;
