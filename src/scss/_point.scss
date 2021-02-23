@@ -1,0 +1,29 @@
+.point {
+    padding-top: 150px;
+    margin: 0 auto;
+
+    &__title {
+        // padding-top: 150px;
+        // background-color: red;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 56px;
+        width: 917px;
+        margin: 0 auto;
+    }
+
+    &__item {
+    }
+
+    &__text {
+        font-size: 17px;
+        line-height: 15px;
+        text-align: center;
+        padding-top: 30px;
+
+        color: $grey;
+    }
+}
