@@ -7,4 +7,5 @@ $(window).on("load", function () {
 @@include("./scripts/prices.js")
 @@include("./scripts/range.js")
 @@include("./scripts/popups.js")
+@@include("./scripts/header.js")
 })
