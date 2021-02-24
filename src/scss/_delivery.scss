@@ -1,6 +1,7 @@
 .delivery {
     padding-top: 140px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
@@ -9,18 +10,22 @@
         height: 212.16px;
     }
     &__text {
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 47px;
-        color: $dark;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 30px;
+        /* identical to box height, or 130% */
+
+        text-align: center;
+        padding-top: 80px;
     }
     &__subtitle {
-        font-size: 20px;
-        line-height: 27px;
+        font-style: normal;
         font-weight: normal;
+        font-size: 17px;
+        line-height: 27px;
         color: $grey;
-        width: 377px;
-        padding-top: 25px;
+        // width: 377px;
+        padding-top: 12px;
     }
     &__buttons {
         padding-top: 38px;
@@ -35,13 +40,14 @@
         font-size: 17px;
         line-height: 15px;
         color: $grey;
+        margin-bottom: 25px;
     }
     &__connect {
         background: $dark-blue;
         border-radius: 25px;
-        width: 210px;
+        // width: 210px;
         height: 45px;
-        
+
         text-align: center;
 
         div {
@@ -50,6 +56,60 @@
             line-height: 23px;
 
             color: $white;
+        }
+    }
+}
+
+@media (min-width: 1250px) {
+    .delivery {
+        flex-direction: row;
+
+        &__pic {
+            width: 437.92px;
+            height: 212.16px;
+        }
+        &__text {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 47px;
+            color: $dark;
+            padding-top: 0;
+        }
+        &__subtitle {
+            font-size: 20px;
+            line-height: 27px;
+            color: $grey;
+            width: 377px;
+            padding-top: 25px;
+        }
+        &__buttons {
+            padding-top: 38px;
+        }
+        &__phone {
+            background: $light-grey;
+            border-radius: 25px;
+            width: 295px;
+            height: 45px;
+            padding-left: 26px;
+            padding-right: 62px;
+            font-size: 17px;
+            line-height: 15px;
+        }
+        &__connect {
+            background: $dark-blue;
+            border-radius: 25px;
+            width: 210px;
+            height: 45px;
+
+            text-align: center;
+
+            div {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 23px;
+
+                color: $white;
+            }
         }
     }
 }

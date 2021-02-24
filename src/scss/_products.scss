@@ -1,27 +1,43 @@
 .products {
     background: $white;
+    padding-top: 105px;
+    padding-right: 15px;
     &__items {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__services {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 20px;
+        margin: 0 auto;
     }
 }
 .products.mt-100vh {
     margin-top: 100vh;
 }
 .product {
+    width: 384px;
+    // width: calc(384px + (384px - 350px) * (100vw - 320px) / (1600px - 320px));
+    height: 325px;
+    // height: calc(325px + (325px - 290px) * (100vw - 320px) / (1600px - 320px));
 }
 .service {
     display: flex;
     align-items: center;
-    // width: 350px;
-    flex: 0 0 25%;
+    // flex-direction: column;
+    // padding-right: ;
+    // // width: 350px;
+    // flex: 0 0 21%;
 
     &__pic {
         width: 55px;
         height: 55px;
         border-radius: 11px;
-        margin-right: 35px;
+        margin-right: 15px;
+
         &::before {
             content: url("../img/clock.svg");
             display: flex;
@@ -35,9 +51,10 @@
         font-size: 16px;
         line-height: 23px;
         color: $grey;
-        width: 197px;
+        max-width: 197px;
     }
 }
+
 .blue {
     background: $blue;
 }
@@ -48,19 +65,36 @@
     background: $pink;
 }
 .del {
-    width: 158px;
+    max-width: 158px;
 }
 .quar {
-    width: 71px;
+    max-width: 71px;
 }
 .comp {
-    width: 197px;
+    max-width: 197px;
+}
+@media (max-width: 550px) {
+    .products {
+        &__items {
+        }
+
+        &__services {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            
+            &__text {
+                margin-right: 10px;
+            }
+        }
+        .service {
+
+            flex: 0 0 25%;
+        }
+    }
 }
 
 @media (min-width: 1250px) {
     .products {
-        padding-top: 105px;
-
         &__items {
             display: flex;
         }
@@ -68,11 +102,14 @@
         &__services {
             display: flex;
             align-items: center;
-            // justify-content: space-between;
+            // width: 350px;
+            
         }
     }
-    .product {
-        width: 384px;
-        height: 325px;
+    .service {
+        flex: 0 0 25%;
+        &__pic {
+                margin-right: 35px;
+            }
     }
 }
