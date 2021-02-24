@@ -34,7 +34,7 @@
     &__buttons {
         display: flex;
         align-items: center;
-    }    
+    }
 }
 
 .big-btn {
@@ -64,23 +64,28 @@
     display: none;
     margin-right: 21px;
 }
+
 .tel {
     display: none;
 }
+
 .tel-link {
     display: inline-block;
 }
+
 .inst-link {
     display: none;
 }
+
 .header._fixed {
     position: fixed;
-    width: 1234px;
     z-index: 999;
     top: 0;
     margin-top: 0;
-    left: calc(50% - 1234/2px);
+    width: 100%;
+    left: 0;
 }
+
 .header_fake {
     width: 100%;
     margin-top: 100vh;
@@ -92,9 +97,11 @@
     .tel-link {
         display: none;
     }
+
     .inst-link {
         display: inline-block;
     }
+
     .header {
         .tel {
             display: block;
@@ -104,6 +111,12 @@
 
 
 @media (min-width: 1250px) {
+    .header._fixed {
+        left: auto;
+        left: calc(50% - 1234/2px);
+        width: 1234px;
+    }
+
     .header {
         margin-top: 100vh;
         display: flex;
