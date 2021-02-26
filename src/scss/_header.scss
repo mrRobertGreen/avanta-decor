@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding-top: 20px;
     background: $white;
+    margin-top: 0;
 
     &__logo {
         display: flex;
@@ -88,9 +89,9 @@
 
 .header_fake {
     width: 100%;
-    margin-top: 100vh;
     height: 102px;
     padding-top: 20px;
+    display: none;
 }
 
 @media (min-width: 830px) {
@@ -115,6 +116,9 @@
         width: 100%;
         max-width: 1360px;
         padding: 0 63px;
+    }
+    .header_fake {
+        margin-top: 100vh;
     }
     .header {
         margin-top: 100vh;
