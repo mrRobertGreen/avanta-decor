@@ -1,0 +1,23 @@
+.footer {
+    margin-top: 60px;
+    &__collab {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+        img {
+            display: block;
+        }
+    }
+}
+.map {}
+
+@media (min-width: 900px) {
+    .footer {
+        margin-top: 120px;
+        &__collab {
+            height: 252px;
+        }
+    }
+}

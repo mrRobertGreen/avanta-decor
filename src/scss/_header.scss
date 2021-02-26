@@ -112,11 +112,10 @@
 
 @media (min-width: 1250px) {
     .header._fixed {
-        left: auto;
-        left: calc(50% - 1234/2px);
-        width: 1234px;
+        width: 100%;
+        max-width: 1360px;
+        padding: 0 63px;
     }
-
     .header {
         margin-top: 100vh;
         display: flex;
@@ -181,5 +180,11 @@
     .des {
         display: block;
         margin-right: 21px;
+    }
+}
+
+@media (min-width: 1360px) {
+    .header._fixed {
+        left: calc(50% - 680px);
     }
 }

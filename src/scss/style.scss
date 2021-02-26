@@ -18,6 +18,7 @@
 @import "_work.scss";
 @import "_instagram.scss";
 @import "_questions.scss";
+@import "_footer.scss";
 
 body {
   width: 100%;
@@ -48,13 +49,19 @@ body {
   .main-screen {
     height: 100vh;
     position: fixed;
-    width: 1360px;
+    max-width: 1360px;
     top: 0;
-    left: calc(50% - 680px);
+    left: 0;
     z-index: -1;
+    padding: 0 63px;
   }
   .wrapper {
     padding: 0 63px;
+  }
+}
+@media (min-width: 1360px) {
+  .main-screen {
+    left: calc(50% - 680px);
   }
 }
 
