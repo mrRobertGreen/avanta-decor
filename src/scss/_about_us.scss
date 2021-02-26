@@ -10,11 +10,11 @@
     }
 
     &__pic {
-        flex: 0 0 50%;
+        flex: 0 0 49%;
     }
 
     &__text {
-        flex: 0 0 50%;
+        flex: 0 0 49%;
         p {
             font-weight: bold;
             font-size: 40px;
@@ -26,6 +26,21 @@
             font-size: 20px;
             line-height: 27px;
             color: $grey;
+        }
+    }
+}
+
+@media(max-width: 1050px) {
+    .about-us {
+        &__container {
+            flex-direction: column;
+            padding: 30px;
+            height: auto;
+        }
+        &__text {
+            div {
+                padding-top: 12px;
+            }
         }
     }
 }

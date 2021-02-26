@@ -1,21 +1,24 @@
 .point {
     padding-top: 150px;
-    margin: 0 auto;
+    // margin: 0 auto;
+    text-align: center;
 
     &__title {
-        // padding-top: 150px;
-        // background-color: red;
     }
 
     &__container {
-        display: flex;
-        justify-content: space-between;
         padding-top: 56px;
-        width: 917px;
         margin: 0 auto;
     }
 
     &__item {
+        // div {
+        //     margin: 0 auto;
+        // }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     &__text {
@@ -25,5 +28,17 @@
         padding-top: 30px;
 
         color: $grey;
+    }
+}
+
+@media (min-width: 1250px) {
+    .point {
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 917px;
+        }
     }
 }

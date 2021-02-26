@@ -29,6 +29,7 @@
     }
     &__buttons {
         padding-top: 38px;
+        
     }
     &__phone {
         background: $light-grey;
@@ -45,8 +46,9 @@
     &__connect {
         background: $dark-blue;
         border-radius: 25px;
-        // width: 210px;
+        width: 210px;
         height: 45px;
+        
 
         text-align: center;
 

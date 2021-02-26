@@ -13,12 +13,29 @@
         text-align: center;
     }
     .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 60px;
+
+        @media (min-width: 550px) {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 150px;
+        }
+        
         &__item {
             p {
                 font-size: 17px;
                 line-height: 17px;
                 text-align: center;
                 color: $grey;
+            }
+
+            position: relative;
+            img {
+                height: 190px;
+                position: absolute;
+                top: -35px;
+                left: 29px;
             }
         }
     }
