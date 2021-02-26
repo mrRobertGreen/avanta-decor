@@ -14,11 +14,10 @@
     }
     .grid {
         display: grid;
-        grid-template-columns: 1fr;
         grid-gap: 60px;
+        grid-template-columns: 1fr 1fr;
 
-        @media (min-width: 550px) {
-            grid-template-columns: 1fr 1fr;
+        @media (min-width: 550px) {   
             grid-gap: 150px;
         }
         
