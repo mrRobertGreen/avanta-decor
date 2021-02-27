@@ -82,12 +82,6 @@
     }
 
     &__img {
-        // background-color: $light-grey;
-        // border-radius: 11px;
-        // width: calc(125px + (173 - 125) * (100vw - 320px) / (820 - 320));
-        // height: calc(125px + (173 - 125) * (100vw - 320px) / (820 - 320));
-        // max-width: 173px;
-        // max-height: 173px;
         position: relative;
         img {
             position: absolute;
@@ -98,12 +92,11 @@
 
     &__item_active {
         .types__name {
-            color: $black;
-            padding-top: 54px;
+            color: $dark-blue;
         }
 
         .types__img {
-            border: 2px solid $dark-blue;
+            // border: 2px solid $dark-blue;
         }
     }
 
@@ -111,7 +104,7 @@
         font-size: 15px;
         line-height: 15px;
         text-align: center;
-        padding-top: 11px;
+        padding-top: 46px;
         color: $grey;
     }
 }
