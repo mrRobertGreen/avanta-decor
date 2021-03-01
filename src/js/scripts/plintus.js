@@ -83,7 +83,7 @@ const rangeValueToThickness = (value) => {
 }
 
 let thicknessPrevValue;
-$("#range-thickness-1").on("input", (e) => {
+$("#range-thickness-plintus").on("input", (e) => {
     let value = +e.target.value
     if (value % 2 === 0) {
         if (value === 10) {
@@ -125,7 +125,7 @@ const rangeValueToHeight = (value) => {
 }
 
 let heightPrevValue;
-$("#range-height-1").on("input", (e) => {
+$("#range-height-plintus").on("input", (e) => {
     let value = +e.target.value
     if (value % 2 === 0) {
         if (value === 10) {

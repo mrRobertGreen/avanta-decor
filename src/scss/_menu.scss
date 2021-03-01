@@ -7,7 +7,7 @@
     overflow-x: hidden;
     justify-content: center;
     margin-bottom: 45px;
-    padding-top: 150px;
+    margin-top: 150px;
 
     &__row {
         width: 390px;
@@ -67,4 +67,21 @@
         color: $black;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
     }
+}
+.menu_fake {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 45px;
+    margin-top: 150px; 
+    display: none;
+}
+.menu._fixed {
+    position: fixed;
+    z-index: 999;
+    top: 102px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+    left: 0;
 }

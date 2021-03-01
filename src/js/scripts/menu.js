@@ -34,3 +34,19 @@ $(".menu__item").on("click", (e) => toggleActiveClass(e, "menu__item", "menu__it
 $(".types__item").on("click", (e) => toggleActiveClass(e, "types__item", "types__item_active"))
 $(".material__item").on("click", (e) => toggleActiveClass(e, "material__item", "material__item_active"))
 $(".style__span").on("click", (e) => toggleActiveClass(e, "style__span", "style__span_active"))
+
+const headerHeight = 102
+$(window).scroll(function () {
+    // make menu fixed on top
+    const menuOffset = document.querySelector(".menu").offsetTop + window.innerHeight
+    const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop + window.innerHeight
+    if ($(this).scrollTop() >= menuOffset - headerHeight) {
+        console.log("HELLO");
+        $('.menu_fake').css("display", "block");
+        $('.menu').addClass('_fixed');
+    } 
+    if ($(this).scrollTop() <= fakeMenuOffset - headerHeight) {
+        $('.menu').removeClass('_fixed');
+        $('.menu_fake').css("display", "none");
+    }
+})
