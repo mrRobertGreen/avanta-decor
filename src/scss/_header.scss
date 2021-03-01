@@ -1,3 +1,5 @@
+// планшеты
+
 .header {
     display: flex;
     align-items: center;
@@ -47,7 +49,6 @@
     line-height: 23px;
     color: $grey;
     padding: 11px 40px;
-
 }
 
 .small-btn {
@@ -110,6 +111,29 @@
     }
 }
 
+// правки на телефон
+@media (max-width: 600px) {
+    .header {
+        &__logo {
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        &__main-text {
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 23px;
+            }
+            div {
+                display: none;
+            }
+        }
+    }
+}
 
 @media (min-width: 1250px) {
     .header._fixed {
@@ -167,7 +191,6 @@
         line-height: 23px;
         color: $grey;
         padding: 11px 40px;
-
     }
 
     .small-btn {
