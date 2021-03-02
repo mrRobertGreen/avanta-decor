@@ -5,21 +5,19 @@
     align-items: center;
 
     &__pic {
-        flex: 0 0 40%;
         width: calc(320px + (670 - 320) * (100vw - 320px) / (1800 - 320));
-        background-color: red;
+        // background-color: red;
         img {
             width: 100%;
         }
     }
 
     &__text {
-        flex: 0 0 45%;
         font-size: 20px;
         line-height: 27px;
         color: $grey;
         padding-top: 25px;
-        // max-width: 520px;
+        max-width: 525px;
         p {
             font-weight: bold;
             font-size: 40px;
@@ -52,8 +50,10 @@
 @media (min-width: 1250px) {
     .questions {
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         &__pic {
-            flex: 0 0 50%;
+            flex: 0 0 48%;
         }
 
         &__text {
@@ -61,6 +61,8 @@
             font-size: 20px;
             line-height: 27px;
             color: $grey;
+            max-width: auto;
+            // margin: 0 auto;
             p {
                 font-weight: bold;
                 font-size: 40px;
