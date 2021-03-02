@@ -82,6 +82,7 @@
 @media (min-width: 1250px) {
     .delivery {
         flex-direction: row;
+        align-items: center;
 
         &__pic {
             width: 437.92px;
