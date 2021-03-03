@@ -37,15 +37,20 @@ $(".style__span").on("click", (e) => toggleActiveClass(e, "style__span", "style_
 
 $(window).scroll(function () {
     // make menu fixed on top
-    if (window.matchMedia('(min-width: 600px)').matches) {
-        stickyMenuDesktop(this)
-    } else {
-        stickyMenuMobile(this)
+    const menuOffset = document.querySelector(".menu").offsetTop + window.innerHeight
+    const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop + window.innerHeight
+    if ($(window).scrollTop() >= menuOffset) {
+        $('.menu_fake').css("display", "block");
+        $('.menu').addClass('_fixed');
+    } 
+    if ($(window).scrollTop() <= fakeMenuOffset) {
+        $('.menu').removeClass('_fixed');
+        $('.menu_fake').css("display", "none");
     }
 })
 
 const stickyMenuMobile = (window) => {
-    const marginTop = 80
+    const marginTop = 0
     const menuOffset = document.querySelector(".menu").offsetTop
     const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop
     if ($(window).scrollTop() >= menuOffset - marginTop) {
@@ -58,7 +63,7 @@ const stickyMenuMobile = (window) => {
     }
 }
 const stickyMenuDesktop = () => {
-    const marginTop = 102
+    const marginTop = 0
     const menuOffset = document.querySelector(".menu").offsetTop + window.innerHeight
     const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop + window.innerHeight
     if ($(window).scrollTop() >= menuOffset - marginTop) {
