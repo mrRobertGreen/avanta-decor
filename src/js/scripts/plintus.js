@@ -39,11 +39,11 @@ class Plintus {
             default:
                 return
         }
-        console.log("category: ", this._category);
-        console.log("type: ", this._type);
-        console.log("thickness: ", this._thickness);
-        console.log("height: ", this._height);
-        console.log("metres: ", this._metres);
+        // console.log("category: ", this._category);
+        // console.log("type: ", this._type);
+        // console.log("thickness: ", this._thickness);
+        // console.log("height: ", this._height);
+        // console.log("metres: ", this._metres);
         this._setCorrectPrice()
     }
 }
