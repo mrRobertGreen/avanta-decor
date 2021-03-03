@@ -11,6 +11,7 @@
         font-size: 23px;
         line-height: 30px;
         text-align: center;
+        padding-top: 100px;
     }
     .grid {
         display: grid;
@@ -18,10 +19,10 @@
         grid-template-columns: 1fr 1fr;
         padding-top: 79px;
 
-        @media (min-width: 550px) {   
+        @media (min-width: 550px) {
             grid-gap: 150px;
         }
-        
+
         &__item {
             p {
                 font-size: 17px;
@@ -33,17 +34,9 @@
 
             position: relative;
             img {
-                height: 190px;
-                position: absolute;
-                top: -35px;
-                left: 29px;
+                height: 150px;
             }
         }
-    }
-    &__circle {
-        width: 126px;
-        height: 126px;
-        border-radius: 100px;
     }
 }
 
@@ -51,6 +44,17 @@
     background: $light-grey;
 }
 
+@media(min-width: 450px) {
+    .forms {
+        .grid {
+            &__item {
+                img {
+                    height: 170px;
+                }
+            }
+        }
+    }
+}
 @media (min-width: 1250px) {
     .forms {
         .grid {
@@ -65,9 +69,9 @@
 
                 img {
                     height: 190px;
-                    position: absolute;
-                    top: -35px;
-                    left: 29px;
+                    // position: absolute;
+                    // top: -35px;
+                    // left: 29px;
                 }
                 p {
                     padding-top: 58px;

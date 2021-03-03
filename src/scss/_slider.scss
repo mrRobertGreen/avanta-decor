@@ -73,12 +73,16 @@
 
     /* Слайд */
     .slick-slide {
-
         background-color: $pink;
         max-width: 387px;
         max-height: 387px;
         border-radius: 25px;
         margin: 0 37px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+        }
     }
 
     /* Слайд активный (показывается) */

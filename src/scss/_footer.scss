@@ -1,13 +1,18 @@
 .footer {
     margin-top: 60px;
     &__collab {
-        width: 100%;
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: center;
-        height: 160px;
+        height: 60px;
+        max-width: 570px;
+        margin: 0 auto;
+        padding-top: 70px;
         img {
             display: block;
+            height: 60px;
+            // width: 190px;
         }
     }
 }
@@ -17,7 +22,8 @@
     .footer {
         margin-top: 120px;
         &__collab {
-            height: 252px;
+            // height: 252px;
+            flex-direction: row;
         }
     }
 }

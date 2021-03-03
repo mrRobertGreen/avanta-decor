@@ -84,9 +84,10 @@
     &__img {
         position: relative;
         img {
-            position: absolute;
-            top: -60px;
-            left: 27px;
+            height: 125px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 

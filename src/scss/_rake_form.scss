@@ -19,9 +19,9 @@
 
         img {
             height: 213px;
-            position: absolute;
-            top: -54px;
-            left: 27px;
+            // position: absolute;
+            // top: -54px;
+            // left: 27px;
         }
         p {
             font-size: 17px;
@@ -31,11 +31,6 @@
 
             color: $grey;
         }
-    }
-    &__circle {
-        width: 126px;
-        height: 126px;
-        border-radius: 100px;
     }
 }
 
@@ -57,9 +52,6 @@
 
             img {
                 height: 213px;
-                position: absolute;
-                top: -54px;
-                left: 27px;
             }
             p {
                 font-size: 17px;
@@ -69,11 +61,6 @@
 
                 color: $grey;
             }
-        }
-        &__circle {
-            width: 126px;
-            height: 126px;
-            border-radius: 100px;
         }
     }
 }

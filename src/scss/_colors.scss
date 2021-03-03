@@ -28,6 +28,9 @@
             height: calc(70px + (115 - 70) * (100vw - 320px) / (1600 - 320));
             width: calc(70px + (115 - 70) * (100vw - 320px) / (1600 - 320));
             border-radius: 70px;
+            img {
+                width: 100%;
+            }
         }
     }
 }
