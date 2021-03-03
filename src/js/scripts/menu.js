@@ -35,18 +35,38 @@ $(".types__item").on("click", (e) => toggleActiveClass(e, "types__item", "types_
 $(".material__item").on("click", (e) => toggleActiveClass(e, "material__item", "material__item_active"))
 $(".style__span").on("click", (e) => toggleActiveClass(e, "style__span", "style__span_active"))
 
-const headerHeight = 102
 $(window).scroll(function () {
     // make menu fixed on top
-    const menuOffset = document.querySelector(".menu").offsetTop + window.innerHeight
-    const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop + window.innerHeight
-    if ($(this).scrollTop() >= menuOffset - headerHeight) {
-        console.log("HELLO");
+    if (window.matchMedia('(min-width: 600px)').matches) {
+        stickyMenuDesktop(this)
+    } else {
+        stickyMenuMobile(this)
+    }
+})
+
+const stickyMenuMobile = (window) => {
+    const marginTop = 80
+    const menuOffset = document.querySelector(".menu").offsetTop
+    const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop
+    if ($(window).scrollTop() >= menuOffset - marginTop) {
         $('.menu_fake').css("display", "block");
         $('.menu').addClass('_fixed');
     } 
-    if ($(this).scrollTop() <= fakeMenuOffset - headerHeight) {
+    if ($(window).scrollTop() <= fakeMenuOffset - marginTop) {
         $('.menu').removeClass('_fixed');
         $('.menu_fake').css("display", "none");
     }
-})
+}
+const stickyMenuDesktop = () => {
+    const marginTop = 102
+    const menuOffset = document.querySelector(".menu").offsetTop + window.innerHeight
+    const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop + window.innerHeight
+    if ($(window).scrollTop() >= menuOffset - marginTop) {
+        $('.menu_fake').css("display", "block");
+        $('.menu').addClass('_fixed');
+    } 
+    if ($(window).scrollTop() <= fakeMenuOffset - marginTop) {
+        $('.menu').removeClass('_fixed');
+        $('.menu_fake').css("display", "none");
+    }
+}

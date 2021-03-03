@@ -35,8 +35,13 @@ body {
   background: $white;
 }
 .main-screen {
-  position: static;
-  width: 100%;
+  height: 100vh;
+  position: fixed;
+  max-width: 1360px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 0 63px;
 }
 
 @media (min-width: 500px) {
