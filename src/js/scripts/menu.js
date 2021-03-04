@@ -38,12 +38,13 @@ $(".style__span").on("click", (e) => toggleActiveClass(e, "style__span", "style_
 $(window).scroll(function () {
     // make menu fixed on top
     const menuOffset = document.querySelector(".menu").offsetTop + window.innerHeight
+    const finalBlockOffset = document.querySelector("#hide-menu").offsetTop + window.innerHeight
     const fakeMenuOffset = document.querySelector(".menu_fake").offsetTop + window.innerHeight
-    if ($(window).scrollTop() >= menuOffset) {
+    if ($(window).scrollTop() >= menuOffset && $(window).scrollTop() <= finalBlockOffset) {
         $('.menu_fake').css("display", "block");
         $('.menu').addClass('_fixed');
     }
-    if ($(window).scrollTop() <= fakeMenuOffset) {
+    if ($(window).scrollTop() <= fakeMenuOffset || $(window).scrollTop() > finalBlockOffset) {
         $('.menu').removeClass('_fixed');
         $('.menu_fake').css("display", "none");
     }
