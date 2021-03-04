@@ -11,12 +11,17 @@
         padding-top: 70px;
         img {
             display: block;
-            height: 60px;
+            height: 30px;
             // width: 190px;
         }
     }
 }
 .map {}
+._x {
+    max-width: 43px;
+    max-height: 43px;
+}
+
 
 @media (min-width: 900px) {
     .footer {
@@ -24,6 +29,9 @@
         &__collab {
             // height: 252px;
             flex-direction: row;
+            img {
+                height: 60px;   
+            }
         }
     }
 }
