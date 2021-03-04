@@ -1,0 +1,30 @@
+.instagram {
+    padding-top: 135px;
+    &__title {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 40px;
+
+        color: $dark;
+        span {
+            color: $grey;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        div {
+            background-color: red;
+            width: calc(230px + (280-230)*(100vw - 320px)/(1600- 320));
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .instagram {
+        &__grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}

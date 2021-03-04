@@ -59,7 +59,7 @@
         margin-right: 15px;
 
         &::before {
-            content: url("../img/clock.svg");
+            content: url("");
             display: flex;
             align-items: center;
             justify-content: center;
@@ -78,8 +78,9 @@
 .blue {
     background: $blue;
     &::before {
-        content: url("../img/product_delivery.jpg");
-    
+        content: url("../img/little1.png");
+        width: 10px;
+        height: 10px;
     }
 }
 .yellow {
