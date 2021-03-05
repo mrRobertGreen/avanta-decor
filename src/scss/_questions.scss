@@ -13,15 +13,18 @@
     }
 
     &__text {
-        font-size: 20px;
+
+        font-weight: normal;
+        font-size: 17px;
         line-height: 27px;
         color: $grey;
         padding-top: 25px;
         max-width: 525px;
         p {
-            font-weight: bold;
-            font-size: 40px;
-            line-height: 47px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 23px;
+            line-height: 23px;
             color: $dark;
         }
     }

@@ -4,9 +4,9 @@
         color: $grey;
     }
     &__title {
-        font-weight: bold;
-        font-size: 40px;
-        line-height: 40px;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 23px;
 
         color: $dark;
         span {
@@ -19,13 +19,18 @@
         grid-template-columns: 1fr 1fr;
         div {
             background-color: red;
-            width: calc(230px + (280-230)*(100vw - 320px)/(1600- 320));
+            width: calc(230px + (280-230) * (100vw - 320px) / (1600- 320));
         }
     }
 }
 
 @media (min-width: 900px) {
     .instagram {
+        &__title {
+            font-weight: bold;
+            font-size: 40px;
+            line-height: 40px;
+        }
         &__grid {
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
