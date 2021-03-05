@@ -133,8 +133,8 @@ const plintusTree = {
     },
 }
 
-const plintusMDF = {
-    finish: {
+const plintusMDF = { // временно категории уходят, поэтому все цены на МДФ в dyed
+    finish: { 
         10: {
             70: 100,
             80: 150,
@@ -194,7 +194,7 @@ const plintusMDF = {
             150: 303,
         },
     },
-    dyed: {
+    dyed: { 
         10: {
             70: 100,
             80: 150,

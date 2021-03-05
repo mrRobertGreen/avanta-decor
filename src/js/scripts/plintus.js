@@ -1,7 +1,7 @@
 class Plintus {
     constructor() {
         this._category = "mdf"
-        this._type = "finish"
+        this._type = "dyed"
         this._thickness = 12
         this._height = 70
         this._metres = 1
@@ -114,11 +114,11 @@ const rangeValueToHeight = (value) => {
         case 3:
             return 80
         case 5:
-            return 100
+            return 90
         case 7:
-            return 120
+            return 100
         case 9:
-            return 150
+            return 120
         default:
             return 70
     }
