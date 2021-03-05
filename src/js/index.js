@@ -2,6 +2,7 @@
 $(window).on("load", function () {
 @@include("./scripts/menu.js")
 @@include("./scripts/slider.js")
+@@include("./scripts/sizes.js")
 @@include("./scripts/building.js")
 @@include("./scripts/plintus.js")
 @@include("./scripts/prices.js")

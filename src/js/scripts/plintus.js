@@ -50,98 +50,97 @@ class Plintus {
 
 const plintus = new Plintus()
 
+const setRangeValues = (selector, values) => {
+    const $elem = $(selector)
+    let html = ""
+    values.forEach(value => {
+        html += `<div>${value}</div>`
+    })
+    $elem.html(html)
+
+}
+const setRangeStyle = (selector, count) => {
+    const $elem = $(selector)
+    switch (count) {
+        case 4:
+            $elem.attr("max", "8")
+            return
+        case 5:
+            $elem.attr("max", "10")
+            return
+        case 6:
+            $elem.attr("max", "12")
+            return
+        case 8:
+            $elem.attr("max", "16")
+            return
+        default:
+            return
+    }
+
+}
+
 $(".material__item").on("click", (e) => {
     const id = $(e.target).attr("id")
     if (id === "mdf") {
-        plintus.setValue("type", "finish")
+        plintus.setValue("type", "dyed")
         plintus.setValue("category", "mdf")
+        setRangeValues("#building_plintus ._thickness", [10, 12, 16, 18])
+        setRangeStyle("#range-thickness-plintus", 4)
+        setRangeValues("#building_plintus ._height", [70, 80, 100, 120, 150])
+        setRangeStyle("#range-height-plintus", 5)
     } else {
         plintus.setValue("type", id)
         plintus.setValue("category", "tree")
+        setRangeValues("#building_plintus ._thickness", [12, 14, 16, 18, 20, 22])
+        setRangeStyle("#range-thickness-plintus", 6)
+        setRangeValues("#building_plintus ._height", [70, 80, 90, 100, 120])
+        setRangeStyle("#range-height-plintus", 5)
     }
+    initRangeFillLower()
 })
 $(".style__span").on("click", (e) => {
     const type = $(e.target).attr("id")
     plintus.setValue("type", type)
 })
 
-const rangeValueToThickness = (value) => {
-    switch (+value) {
-        case 1:
-            return 12
-        case 3:
-            return 14
-        case 5:
-            return 16
-        case 7:
-            return 18
-        case 9:
-            return 20
-        default:
-            return 12
+const createSetCorrectInputValue = (selector) => {
+    let prevValue;
+    return () => {
+        const $input = $(selector)
+        let value = +$input.val()
+        const maxValue = +$input.attr("max")
+        const minValue = +$input.attr("min")
+        if (value % 2 === 0) {
+            if (value === maxValue) {
+                $input.val(value = maxValue - 1)
+            } else if (value === minValue) {
+                $input.val(value = minValue + 1)
+            } else if (prevValue > value) {
+                $input.val(--value)
+            } else {
+                $input.val(++value)
+            }
+        } else {
+            prevValue = value
+        }
+        return value
     }
 }
 
-let thicknessPrevValue;
-$("#range-thickness-plintus").on("input", (e) => {
-    let value = +e.target.value
-    if (value % 2 === 0) {
-        if (value === 10) {
-            $(e.target).val(value = 9)
-        } else if (value === 0) {
-            $(e.target).val(value = 1)
-            // setAnimateRangeValue($(e.target), thicknessPrevValue, value = 1)
-        } else if (thicknessPrevValue > value) {
-            $(e.target).val(--value)
-            // setAnimateRangeValue($(e.target), thicknessPrevValue, --value)
-        } else {
-            $(e.target).val(++value)
-            // setAnimateRangeValue($(e.target), thicknessPrevValue, ++value)
-        }
-    } else {
-        thicknessPrevValue = value
-    }
 
-    const thickness = rangeValueToThickness(value)
+$("#range-thickness-plintus").on("input", (e) => {
+    const setCorrectInputValue = createSetCorrectInputValue(e.target)
+    const value = setCorrectInputValue()
+    const thickness = rangeValueToThicknessPlintus(plintus._category, plintus._type, value)
     $("#thickness-mm").html(thickness + " мм.")
     plintus.setValue("thickness", thickness)
 })
 
-const rangeValueToHeight = (value) => {
-    switch (+value) {
-        case 1:
-            return 70
-        case 3:
-            return 80
-        case 5:
-            return 90
-        case 7:
-            return 100
-        case 9:
-            return 120
-        default:
-            return 70
-    }
-}
-
-let heightPrevValue;
 $("#range-height-plintus").on("input", (e) => {
-    let value = +e.target.value
-    if (value % 2 === 0) {
-        if (value === 10) {
-            setAnimateRangeValue()
-            $(e.target).val(value = 9)
-        } else if (value === 0) {
-            $(e.target).val(value = 1)
-        } else if (heightPrevValue > value) {
-            $(e.target).val(--value)
-        } else {
-            $(e.target).val(++value)
-        }
-    } else {
-        heightPrevValue = value
-    }
-    const height = rangeValueToHeight(value)
+    const setCorrectInputValue = createSetCorrectInputValue(e.target)
+    const value = setCorrectInputValue()
+    const height = rangeValueToHeightPlintus(plintus._category, plintus._type, value)
     $("#height-mm").html(height + " мм.")
     plintus.setValue("height", height)
 })
@@ -151,5 +150,5 @@ $(".size__input").on("input", (e) => {
 })
 
 const setAnimateRangeValue = (range, prevValue, nextValue) => {
-    
+
 }
