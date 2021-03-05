@@ -4,13 +4,10 @@ $('.discounts__slider').slick({
     arrows: false,
     dots: true,
     centerMode: true,
-    // centerPadding: '50px',
-    slidesToShow: 1,
+    // slidesToShow: 1,
     focusOnSelect: true,
-    swipe: true,
-    touchMove: true,
+    // swipe: true,
+    // touchMove: true,
     variableWidth: true,
-    // cssEase: 'ease-out',
     speed: 400,
-    // useCSS: false
 })
