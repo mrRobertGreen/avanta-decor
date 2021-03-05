@@ -33,9 +33,11 @@ body {
   margin: 0 auto;
   position: relative;
   background: $white;
+  overflow-x: hidden;
+  margin-top: 100vh;
 }
 .main-screen {
-  height: 100vh;
+  height: 100vh;  
   position: fixed;
   max-width: 1360px;
   top: 0;

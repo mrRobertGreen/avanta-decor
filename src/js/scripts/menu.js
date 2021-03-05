@@ -27,11 +27,14 @@ if (window.matchMedia("(max-width: 425px)").matches) {
     enableMenuScroll("menu-row", "menu__item", [0, 55, 150])
 }
 if (window.matchMedia("(max-width: 830px)").matches) {
-    enableMenuScroll("types-row", "types__item", [0, 170, 360, 580])
+    enableMenuScroll("types-row-plintus", "types__item", [0, 80, 170, 210])
+    enableMenuScroll("types-row-trim", "types__item_trim", [0, 80, 170, 210])
 }
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, "menu__item", "menu__item_active"))
-$(".types__item").on("click", (e) => toggleActiveClass(e, "types__item", "types__item_active"))
+$(".types__item_plintus").on("click", (e) => toggleActiveClass(e, "types__item_plintus", "types__item_active"))
+$(".types__item_trim").on("click", (e) => toggleActiveClass(e, "types__item_trim", "types__item_active"))
+$(".types__item_rake").on("click", (e) => toggleActiveClass(e, "types__item_rake", "types__item_active"))
 $(".material__item").on("click", (e) => toggleActiveClass(e, "material__item", "material__item_active"))
 $(".style__span").on("click", (e) => toggleActiveClass(e, "style__span", "style__span_active"))
 
