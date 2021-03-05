@@ -12,10 +12,17 @@
 
         color: #000;
     }
+
     &__slider {
         padding-top: 55px;
+
         img {
-            
+            background: #000;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            max-width: 387px;
+            max-height: 387px;
         }
     }
 }
