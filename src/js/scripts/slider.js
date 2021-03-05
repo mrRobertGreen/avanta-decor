@@ -11,3 +11,11 @@ $('.discounts__slider').slick({
     variableWidth: true,
     speed: 400,
 })
+
+
+const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+const isExplorer = /*@cc_on!@*/false || !!document.documentMode;
+if (isSafari || isExplorer) {
+    console.log("EXPLORER || SAFARI");
+    $(".discounts__slider").addClass(".safari")
+}
