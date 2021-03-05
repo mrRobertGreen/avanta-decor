@@ -50,6 +50,10 @@
     }
 }
 
+.dblock {
+    display: block;
+}
+
 @media (min-width: 1250px) {
     .questions {
         flex-direction: row;

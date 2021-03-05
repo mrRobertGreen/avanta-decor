@@ -1,3 +1,10 @@
+@mixin back {
+    background-position: 15% 15%;
+    background-repeat: no-repeat;
+    background-size: 93% 93%;
+   
+}
+
 .products {
     background: $white;
     padding-top: 105px;
@@ -58,13 +65,13 @@
         border-radius: 11px;
         margin-right: 15px;
 
-        &::before {
-            content: url("");
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 13px;
-        }
+        // &::before {
+        //     content: url("");
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     padding-top: 13px;
+        // }
     }
 
     &__text {
@@ -77,17 +84,27 @@
 
 .blue {
     background: $blue;
-    &::before {
-        content: url("../img/little1.png");
-        width: 10px;
-        height: 10px;
-    }
+
+    background-image: url("../img/little1.png");
+    @include back;
 }
 .yellow {
     background: $yellow;
+    
+    background-image: url("../img/little4.png");
+    @include back;
+}
+.garant {
+    background: $blue;
+
+    background-image: url("../img/little3.png");
+    @include back;
 }
 .pink {
     background: $pink;
+    
+    background-image: url("../img/little2.png");
+    @include back;
 }
 .del {
     max-width: 158px;
