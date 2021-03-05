@@ -77,7 +77,6 @@ const setRangeStyle = (selector, count) => {
         default:
             return
     }
-
 }
 
 $(".material__item").on("click", (e) => {
@@ -148,7 +147,3 @@ $(".size__input").on("input", (e) => {
     const value = e.target.value
     plintus.setValue("metres", value)
 })
-
-const setAnimateRangeValue = (range, prevValue, nextValue) => {
-
-}
