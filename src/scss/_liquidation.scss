@@ -6,10 +6,12 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    height: 100%;
 
     &__pics {
-
         img {
+            // display: block;
+            // width: calc(320px + (470 - 320) * (100vw - 320px) / (1600px - 320px));
             max-width: 470px;
         }
     }
@@ -17,7 +19,9 @@
     &__text {
         padding: 0 15px;
         // background-color: red;
-        max-width: 568px;
+        // max-width: 568px;
+        padding-top: 44px;
+        width: 100%;
     }
 
     &__pretitle {
@@ -41,10 +45,9 @@
     }
 
     &__subtitle {
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 47px;
-        // width: 518px;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 25px;
         color: $grey;
     }
 
@@ -62,7 +65,6 @@
         display: flex;
         padding-top: 35px;
         align-items: center;
-
 
         .catalog {
             background: $dark-blue;
@@ -83,6 +85,8 @@
 
 .promo-mobile {
     display: block;
+    max-width: auto;
+    width: calc(320px + (660 - 320) * (100vw - 320px) / (1100 - 320));
 }
 
 @media (min-width: 580px) {
@@ -91,11 +95,18 @@
             margin: 0 auto;
         }
 
-        &__text {}
+        &__text {
+            max-width: 568px;
+        }
 
         &__buttons {
             max-width: 80%;
         }
+    }
+    .promo-mobile {
+        display: block;
+        max-width: auto;
+        width: calc(320px + (660 - 320) * (100vw - 320px) / (1100 - 320));
     }
 }
 
@@ -113,6 +124,7 @@
 
         &__text {
             flex: 0 0 50%;
+            padding-top: 0;
         }
 
         &__pretitle {
@@ -191,5 +203,4 @@
     .promo-mobile {
         display: none;
     }
-
 }

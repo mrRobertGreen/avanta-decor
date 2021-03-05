@@ -1,5 +1,8 @@
 .instagram {
     padding-top: 135px;
+    a {
+        color: $grey;
+    }
     &__title {
         font-weight: bold;
         font-size: 40px;
