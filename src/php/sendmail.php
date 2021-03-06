@@ -11,24 +11,18 @@
 	$mail->IsHTML(true);
 
 	//От кого письмо
-	$mail->setFrom('hi@stuiocan.ru', 'StudentCan');
+	$mail->setFrom('hi@avanta.ru', 'Avanta');
 	//Кому отправить
-	$mail->addAddress('hello@studentcan.ru');
+	$mail->addAddress('brucelogmun@yandex.ru');
 	//Тема письма
-	$mail->Subject = 'Заявка StudentCan';
+	$mail->Subject = 'Заявка Avanta';
 
 
 	//Тело письма
 	$body = '<h1>Получена новая заявка с сайта Аванта Декор!</h1>';
 	
-	if(trim(!empty($_POST['name']))){
-		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
-	}
-	if(trim(!empty($_POST['email']))){
-		$body.='<p><strong>Телефон, почта или мессенджер:</strong> '.$_POST['email'].'</p>';
-	}
-	if(trim(!empty($_POST['message']))){
-		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
+	if(trim(!empty($_POST['phone']))){
+		$body.='<p><strong>Телефон или мессенджер:</strong> '.$_POST['phone'].'</p>';
 	}
 
 	$mail->Body = $body;

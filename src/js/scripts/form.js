@@ -4,6 +4,9 @@ const buildPopupForm = document.getElementById('build-popup-form');
 connectPopupForm.addEventListener('submit', (e) => formSend(e, connectPopupForm));
 buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
 
+const getBuildingData = () => {
+	
+}
 
 async function formSend(e, form) {
 	e.preventDefault();
