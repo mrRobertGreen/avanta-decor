@@ -1,7 +1,7 @@
 @mixin back {
-    background-position: 15% 15%;
+    background-position: 43% 43%;
     background-repeat: no-repeat;
-    background-size: 93% 93%;
+    background-size: 75% 75%;
    
 }
 
@@ -97,7 +97,6 @@
 }
 .yellow {
     background: $yellow;
-    
     background-image: url("../img/little4.png");
     @include back;
 }

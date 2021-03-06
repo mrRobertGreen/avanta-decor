@@ -104,7 +104,11 @@
 
         .types__img {
             // border: 2px solid $dark-blue;
+                // &::after {
+                //     content: url("../img/check.jpg");
+                // }
         }
+        
     }
 
     &__name {
