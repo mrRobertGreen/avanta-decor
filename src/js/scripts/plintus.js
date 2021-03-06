@@ -7,7 +7,7 @@ class Plintus {
         this._metres = 1
     }
     _setPrice = (value) => {
-        $(".size__price").html(`<p>${value} ₽</p>`)
+        $("#building_plintus .size__price").html(`<p>${value} ₽</p>`)
     }
     _setCorrectPrice = () => {
         let price;
@@ -79,7 +79,7 @@ const setRangeStyle = (selector, count) => {
     }
 }
 
-$(".material__item").on("click", (e) => {
+$("#building_plintus .material__item").on("click", (e) => {
     const id = $(e.target).attr("id")
     if (id === "mdf") {
         plintus.setValue("type", "dyed")
@@ -98,7 +98,7 @@ $(".material__item").on("click", (e) => {
     }
     initRangeFillLower()
 })
-$(".style__span").on("click", (e) => {
+$("#building_plintus .style__span").on("click", (e) => {
     const type = $(e.target).attr("id")
     plintus.setValue("type", type)
 })
@@ -126,13 +126,11 @@ const createSetCorrectInputValue = (selector) => {
         return value
     }
 }
-
-
 $("#range-thickness-plintus").on("input", (e) => {
     const setCorrectInputValue = createSetCorrectInputValue(e.target)
     const value = setCorrectInputValue()
     const thickness = rangeValueToThicknessPlintus(plintus._category, plintus._type, value)
-    $("#thickness-mm").html(thickness + " мм.")
+    $("#building_plintus .thickness-mm").html(thickness + " мм.")
     plintus.setValue("thickness", thickness)
 })
 
@@ -140,10 +138,10 @@ $("#range-height-plintus").on("input", (e) => {
     const setCorrectInputValue = createSetCorrectInputValue(e.target)
     const value = setCorrectInputValue()
     const height = rangeValueToHeightPlintus(plintus._category, plintus._type, value)
-    $("#height-mm").html(height + " мм.")
+    $("#building_plintus .height-mm").html(height + " мм.")
     plintus.setValue("height", height)
 })
-$(".size__input").on("input", (e) => {
+$("#building_plintus .size__input").on("input", (e) => {
     const value = e.target.value
     plintus.setValue("metres", value)
 })
