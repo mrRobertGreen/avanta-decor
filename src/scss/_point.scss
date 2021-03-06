@@ -9,16 +9,21 @@
     &__container {
         padding-top: 56px;
         margin: 0 auto;
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: 1fr;
     }
 
     &__item {
-        // div {
-        //     margin: 0 auto;
-        // }
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 11px;
+        }
     }
 
     &__text {
@@ -28,6 +33,14 @@
         padding-top: 30px;
 
         color: $grey;
+    }
+}
+
+@media (min-width: 600px) {
+    .point {
+        &__container {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 
