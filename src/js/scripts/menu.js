@@ -33,15 +33,57 @@ if (window.matchMedia("(max-width: 830px)").matches) {
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, ".menu__item", "menu__item_active"))
 $("#building_plintus .types__item").on("click", (e) => {
-    const id = $(e.target).attr("id")
+    const id = $(e.currentTarget).attr("id")
+    switch (id) {
+        case "plintus-evro":
+            buildingData.form = "Евро"
+            break
+        case "plintus-evro-streight":
+            buildingData.form = "Евро (прямой)"
+            break
+        case "plintus-boot":
+            buildingData.form = "Сапожок"
+            break
+        case "plintus-figure":
+            buildingData.form = "Фигурный"
+            break
+        default:
+            break
+    }
     toggleActiveClass(e, "#building_plintus .types__item", "types__item_active")
 })
 $("#building_trim .types__item").on("click", (e) => {
-    const id = $(e.target).attr("id")
+    const id = $(e.currentTarget).attr("id")
+    switch (id) {
+        case "trim-evro":
+            buildingData.form = "Евро"
+            break
+        case "trim-evro-streight":
+            buildingData.form = "Евро (прямой)"
+            break
+        case "trim-semicircular":
+            buildingData.form = "Полукруглый"
+            break
+        case "plintus-figure":
+            buildingData.form = "Фигурный"
+            break
+        default:
+            break
+    }
     toggleActiveClass(e, "#building_trim .types__item", "types__item_active")
 })
 $("#building_rake .types__item").on("click", (e) => {
-    const id = $(e.target).attr("id")
+    const id = $(e.currentTarget).attr("id")
+    switch (id) {
+        case "rake-with-groove":
+            buildingData.form = "С пазом"
+            break
+        case "rake-without-groove":
+            buildingData.form = "Без паза"
+            break
+        default:
+            break
+    }
     toggleActiveClass(e, "#building_rake .types__item", "types__item_active")
 })
 $(".material__item").on("click", (e) => toggleActiveClass(e, ".material__item", "material__item_active"))
@@ -65,7 +107,6 @@ $(window).scroll(function () {
 const linkClasses = ".menu__track"
 
 $(linkClasses).on('click', '[href^="#"]', async function (e) {
-    console.log("link");
     // плавная прокрутка до якоря
     e.preventDefault()
     isAllowedAutoSwitching = false

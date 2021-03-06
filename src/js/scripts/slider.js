@@ -1,21 +1,52 @@
-$('.discounts__slider').slick({
-    adaptiveHeight: true,
-    autoplay: true,
-    arrows: false,
-    dots: true,
-    centerMode: true,
-    // slidesToShow: 1,
-    focusOnSelect: true,
-    // swipe: true,
-    // touchMove: true,
-    variableWidth: true,
-    speed: 400,
-})
+let isSafari = false,
+    isExplorer = false
 
+// CHROME
+if (navigator.userAgent.indexOf("Chrome") != -1) {
+    console.log("Google Chrome");
+}
+// FIREFOX
+else if (navigator.userAgent.indexOf("Firefox") != -1) {
+    console.log("Mozilla Firefox");
+}
+// INTERNET EXPLORER
+else if (navigator.userAgent.indexOf("MSIE") != -1) {
+    isExplorer = true
+}
+// EDGE
+else if (navigator.userAgent.indexOf("Edge") != -1) {
+    console.log("Internet Exploder");
+}
+// SAFARI
+else if (navigator.userAgent.indexOf("Safari") != -1) {
+    isSafari = true
+}
+// OPERA
+else if (navigator.userAgent.indexOf("Opera") != -1) {
+    console.log("Opera");
+}
+// YANDEX BROWSER
+else if (navigator.userAgent.indexOf("YaBrowser") != -1) {
+    console.log("YaBrowser");
+}
+// OTHERS
+else {
+    console.log("Others");
+}
 
-const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
-const isExplorer = /*@cc_on!@*/false || !!document.documentMode;
 if (isSafari || isExplorer) {
-    console.log("EXPLORER || SAFARI");
-    $(".discounts__slider").addClass(".safari")
+    $(".discounts__slider").addClass("safari")
+    $(".safari").removeClass("discounts__slider")
+    $('.discounts__slider').slick("unslick")
+} else {
+    $('.discounts__slider').slick({
+        adaptiveHeight: true,
+        autoplay: true,
+        arrows: false,
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+        variableWidth: true,
+        speed: 400,
+    })
 }

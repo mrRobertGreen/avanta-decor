@@ -17,7 +17,6 @@
         padding-top: 55px;
 
         img {
-            background: #000;
             width: 100%;
             height: 100%;
             border-radius: 25px;
@@ -31,11 +30,22 @@
     display: grid;
     grid-gap: 25px;
     grid-template-columns: 1fr;
+    margin-top: 45px;
+    .discounts__slide {
+        margin: 0 auto;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        max-width: 387px;
+        max-height: 387px;
+    }
 }
 
 @media (min-width: 600px) {
     .safari {
-
+        margin-top: 60px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
     }

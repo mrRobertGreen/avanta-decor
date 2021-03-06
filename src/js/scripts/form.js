@@ -8,7 +8,6 @@ async function formSend(e, form) {
 	e.preventDefault();
 
 	let formData = new FormData(form);
-	console.log(formData);
 	// let error = formValidate(form);
 	let error = null
 

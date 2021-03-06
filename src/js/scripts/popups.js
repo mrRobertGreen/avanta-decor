@@ -2,9 +2,23 @@ $(".liquidation__btn").click(() => {
     openPopup("connect-popup")
     enableClosingPopupOnOverlayClick("connect-popup", "popup__body")
 })
-$(".building__btn").click(() => {
+$(".building__btn").click((e) => {
     openPopup("build-popup")
     enableClosingPopupOnOverlayClick("build-popup", "popup__body")
+    const id = $(e.currentTarget).attr("id")
+    switch (id) {
+        case "plintus-btn":
+            buildingData.name = "Плинтус"
+            break;
+        case "rake-btn":
+            buildingData.name = "Рейка"
+            break;
+        case "trim-btn":
+            buildingData.name = "Наличник"
+            break;
+        default:
+            break;
+    }
 })
 
 const openPopup = (id) => {
