@@ -1,50 +1,21 @@
-.discounts__slider {
-    &__item {
-        visibility: hidden;
-    }
-    &__item:nth-child(1) {
-        visibility: visible;
-    }
-}
-.slider.slick-initialized {
-    .slider__item {
-        visibility: visible;
-    }
-}
+// .discounts__slider {
+//     .slick-slide {
+//         visibility: hidden;
+//     }
+//     .slick-slide::nth-child(1) {
+//         visibility: visible;
+//     }
+// }
+// .discounts__slider.slick-initialized {
+//     .slick-slide {
+//         visibility: visible;
+//     }
+// }
 
 .discounts__slider {
     width: 100%;
     min-width: 0;
     overflow: hidden;
-    // background-color: red;
-
-    &__item {
-        padding: 0 0 21px;
-
-        font-size: 19px;
-        padding-left: 15px;
-    }
-
-    &__title {
-        font-weight: 600;
-        color: black;
-        margin-bottom: 11px;
-    }
-
-    &__subTitle {
-        color: $grey;
-    }
-
-    &__label {
-        font-size: 15px;
-        font-weight: 600;
-        display: inline-block;
-        // color: $white;
-        background-color: $pink;
-        padding: 12px 18px;
-        border-radius: 142px;
-        margin-bottom: 19px;
-    }
 
     ul {
         list-style: none;
@@ -52,10 +23,6 @@
 
     /* Слайдер */
     .slick-slider {
-    }
-
-    /* Слайдер запущен */
-    .slick-slider.slick-initialized {
     }
 
     /* Слайдер с точками */
@@ -78,6 +45,21 @@
         max-height: 387px;
         border-radius: 25px;
         margin: 0 37px;
+        cursor: pointer;
+        
+    }
+    .discounts__slide {
+        visibility: hidden;
+        
+        &:nth-child(1) {
+            visibility: visible;
+        }
+    } 
+    /* Слайдер запущен */
+    &.slick-initialized {
+        .discounts__slide {
+            visibility: visible;
+        }
     }
 
     /* Слайд активный (показывается) */
@@ -128,7 +110,6 @@
 
     /* Активная точка */
     .slick-dots li.slick-active button {
-        //background-color: $yellow;
         background: #292930;
     }
 
@@ -163,6 +144,7 @@
             display: block;
             width: 387px;
             height: 387px;
+            
             
             img {
                 width: 100%;
