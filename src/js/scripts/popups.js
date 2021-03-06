@@ -1,4 +1,11 @@
 $(".liquidation__btn.contact").click(() => {
+    $("#connect-popup .popup__title").html("Связаться с нами")
+    openPopup("connect-popup")
+    enableClosingPopupOnOverlayClick("connect-popup", "popup__body")
+})
+$(".des").click(() => {
+    isCooperation = true
+    $("#connect-popup .popup__title").html("Сотрудничество")
     openPopup("connect-popup")
     enableClosingPopupOnOverlayClick("connect-popup", "popup__body")
 })

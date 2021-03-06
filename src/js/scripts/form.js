@@ -1,8 +1,13 @@
 const connectPopupForm = document.getElementById('connect-popup-form');
+const questionsForm = document.getElementById('questions-form');
+const deliveryForm = document.getElementById('delivery-form');
 const buildPopupForm = document.getElementById('build-popup-form');
 
 connectPopupForm.addEventListener('submit', (e) => formSend(e, connectPopupForm));
 buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
+deliveryForm.addEventListener('submit', (e) => formSend(e, deliveryForm));
+questionsForm.addEventListener('submit', (e) => formSend(e, questionsForm));
+let isCooperation = false
 
 async function formSend(e, form) {
 	e.preventDefault();
@@ -11,8 +16,19 @@ async function formSend(e, form) {
 	// let error = formValidate(form);
 	let error = null
 
+	if (form.id === "build-popup-form") {
+		for (const key in buildingData) {
+			if (Object.hasOwnProperty.call(buildingData, key)) {
+				const element = buildingData[key];
+				formData.append(key, element)
+			}
+		}
+	}
+	if (isCooperation) {
+		formData.append("cooperation", true)
+	}
+
 	if (!error) {
-		showSuccessModal()
 		form.classList.add('_sending');
 		let response = await fetch('sendmail.php', {
 			method: 'POST',
