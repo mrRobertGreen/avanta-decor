@@ -11,14 +11,11 @@
         margin: 0 auto;
     }
 
-    &__style {
-    }
+    &__style {}
 
-    &__dimensions {
-    }
+    &__dimensions {}
 
-    &__size {
-    }
+    &__size {}
 
     &__btn-wrapper {
         display: flex;
@@ -42,7 +39,13 @@
         color: $white;
         text-align: center;
         padding: 12px 0;
+
+        &:hover {
+            transition: 0.2s;
+            background: $hover-blue;
+        }
     }
+
     &__circle {
         width: 126px;
         height: 126px;
@@ -85,6 +88,7 @@
         position: relative;
         display: flex;
         justify-content: center;
+
         img {
             height: 125px;
             display: flex;
@@ -113,11 +117,9 @@
 }
 
 .buildings {
-    &__types {
-    }
+    &__types {}
 
-    &__material {
-    }
+    &__material {}
 }
 
 .material {
@@ -162,6 +164,7 @@
         line-height: 15px;
         color: $grey;
         padding-right: 25px;
+
         span {
             cursor: pointer;
         }
@@ -345,8 +348,7 @@
         padding: 0;
     }
 
-    .types {
-    }
+    .types {}
 
     .size {
         flex-direction: column;

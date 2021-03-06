@@ -59,6 +59,8 @@
         flex: 1 1 50%;
         width: 210px;
         height: 45px;
+        display: block;
+        
     }
 
     &__buttons {
@@ -70,11 +72,19 @@
             background: $dark-blue;
             margin-right: 15px;
             color: $white;
+            &:hover {
+                transition: 0.2s;
+                background: $hover-blue;
+            }
         }
 
         .contact {
             background: $light-grey;
             color: $grey;
+            &:hover {
+                transition: 0.2s;
+                background: $hover-grey;
+            }
         }
     }
 }

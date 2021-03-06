@@ -104,7 +104,7 @@ $(window).scroll(function () {
     }
 })
 
-const linkClasses = ".menu__track"
+const linkClasses = ".menu__track, .liquidation__buttons"
 
 $(linkClasses).on('click', '[href^="#"]', async function (e) {
     // плавная прокрутка до якоря

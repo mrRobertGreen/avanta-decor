@@ -68,6 +68,10 @@
         height: 45px;
 
         text-align: center;
+        &:hover {
+            transition: 0.2s;
+            background: $hover-blue;
+        }
 
         div {
             font-weight: 500;
@@ -75,6 +79,7 @@
             line-height: 23px;
 
             color: $white;
+            
         }
     }
 }

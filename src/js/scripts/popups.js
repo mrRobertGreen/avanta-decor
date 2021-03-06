@@ -1,4 +1,4 @@
-$(".liquidation__btn").click(() => {
+$(".liquidation__btn.contact").click(() => {
     openPopup("connect-popup")
     enableClosingPopupOnOverlayClick("connect-popup", "popup__body")
 })

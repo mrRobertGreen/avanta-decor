@@ -108,6 +108,10 @@
 		font-size: 15px;
 		line-height: 15px;
 		color: $white;
+		&:hover {
+            transition: 0.2s;
+            background: $hover-blue;
+        }
 	}
 }
 
