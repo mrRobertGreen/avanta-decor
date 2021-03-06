@@ -28,6 +28,9 @@
 ._x {
     max-width: 30px;
     max-height: 30px;
+    // padding: 25px 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 @media (min-width: 500px) {
@@ -52,5 +55,6 @@
     ._x {
         max-width: 43px;
         max-height: 43px;
+        margin: 0;
     }
 }
