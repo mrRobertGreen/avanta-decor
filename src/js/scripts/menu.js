@@ -86,7 +86,9 @@ $("#building_rake .types__item").on("click", (e) => {
     }
     toggleActiveClass(e, "#building_rake .types__item", "types__item_active")
 })
-$(".material__item").on("click", (e) => toggleActiveClass(e, ".material__item", "material__item_active"))
+$("#building_rake .material__item").on("click", (e) => toggleActiveClass(e, "#building_rake .material__item", "material__item_active"))
+$("#building_plintus .material__item").on("click", (e) => toggleActiveClass(e, "#building_plintus .material__item", "material__item_active"))
+$("#building_trim .material__item").on("click", (e) => toggleActiveClass(e, "#building_trim .material__item", "material__item_active"))
 $(".style__span").on("click", (e) => toggleActiveClass(e, ".style__span", "style__span_active"))
 
 $(window).scroll(function () {
