@@ -83,7 +83,9 @@
             color: $grey;
             &:hover {
                 transition: 0.2s;
-                background: $hover-grey;
+                background: $light-grey;
+                color: $grey;
+                box-shadow: none;
             }
         }
     }
