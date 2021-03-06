@@ -32,15 +32,17 @@
     grid-gap: 25px;
     grid-template-columns: 1fr;
 }
-.safari__desktop {
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: 1fr 1fr 1fr;
+
+@media (min-width: 600px) {
+    .safari {
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
 }
-// для плашетов
-.safari__pad {
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+@media (min-width: 1250px) {
+    .safari {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
 }
