@@ -32,9 +32,18 @@ if (window.matchMedia("(max-width: 830px)").matches) {
 }
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, ".menu__item", "menu__item_active"))
-$("#building_plintus .types__item").on("click", (e) => toggleActiveClass(e, "#building_plintus .types__item", "types__item_active"))
-$("#building_trim .types__item").on("click", (e) => toggleActiveClass(e, "#building_trim .types__item", "types__item_active"))
-$("#building_rake .types__item").on("click", (e) => toggleActiveClass(e, "#building_rake .types__item", "types__item_active"))
+$("#building_plintus .types__item").on("click", (e) => {
+    const id = $(e.target).attr("id")
+    toggleActiveClass(e, "#building_plintus .types__item", "types__item_active")
+})
+$("#building_trim .types__item").on("click", (e) => {
+    const id = $(e.target).attr("id")
+    toggleActiveClass(e, "#building_trim .types__item", "types__item_active")
+})
+$("#building_rake .types__item").on("click", (e) => {
+    const id = $(e.target).attr("id")
+    toggleActiveClass(e, "#building_rake .types__item", "types__item_active")
+})
 $(".material__item").on("click", (e) => toggleActiveClass(e, ".material__item", "material__item_active"))
 $(".style__span").on("click", (e) => toggleActiveClass(e, ".style__span", "style__span_active"))
 

@@ -88,6 +88,8 @@ $("#building_plintus .material__item").on("click", (e) => {
         setRangeStyle("#range-thickness-plintus", 4)
         setRangeValues("#building_plintus ._height", [70, 80, 100, 120, 150])
         setRangeStyle("#range-height-plintus", 5)
+        buildingData.category = "МДФ"
+        buildingData.type = "Выкрашенный"
     } else {
         plintus.setValue("type", id)
         plintus.setValue("category", "tree")
@@ -95,6 +97,20 @@ $("#building_plintus .material__item").on("click", (e) => {
         setRangeStyle("#range-thickness-plintus", 6)
         setRangeValues("#building_plintus ._height", [70, 80, 90, 100, 120])
         setRangeStyle("#range-height-plintus", 5)
+        buildingData.category = "Массив"
+        switch (id) {
+            case "oak":
+                buildingData.type = "Дуб"
+                break
+            case "ash":
+                buildingData.type = "Ясень"
+                break
+            case "beech":
+                buildingData.type = "Бук"
+                break
+            default:
+                break
+        }
     }
     initRangeFillLower()
 })
@@ -132,6 +148,7 @@ $("#range-thickness-plintus").on("input", (e) => {
     const thickness = rangeValueToThicknessPlintus(plintus._category, plintus._type, value)
     $("#building_plintus .thickness-mm").html(thickness + " мм.")
     plintus.setValue("thickness", thickness)
+    buildingData.thickness = thickness
 })
 
 $("#range-height-plintus").on("input", (e) => {
@@ -140,8 +157,10 @@ $("#range-height-plintus").on("input", (e) => {
     const height = rangeValueToHeightPlintus(plintus._category, plintus._type, value)
     $("#building_plintus .height-mm").html(height + " мм.")
     plintus.setValue("height", height)
+    buildingData.height = height
 })
 $("#building_plintus .size__input").on("input", (e) => {
     const value = e.target.value
     plintus.setValue("metres", value)
+    buildingData.metres = value
 })

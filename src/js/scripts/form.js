@@ -4,10 +4,6 @@ const buildPopupForm = document.getElementById('build-popup-form');
 connectPopupForm.addEventListener('submit', (e) => formSend(e, connectPopupForm));
 buildPopupForm.addEventListener('submit', (e) => formSend(e, buildPopupForm));
 
-const getBuildingData = () => {
-	
-}
-
 async function formSend(e, form) {
 	e.preventDefault();
 
@@ -21,7 +17,7 @@ async function formSend(e, form) {
 		form.classList.add('_sending');
 		let response = await fetch('sendmail.php', {
 			method: 'POST',
-			body: formData	
+			body: formData
 		});
 		if (response.ok) {
 			let result = await response.json();

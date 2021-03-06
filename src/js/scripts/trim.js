@@ -60,6 +60,8 @@ $("#building_trim .material__item").on("click", (e) => {
         setRangeStyle("#range-thickness-trim", 4)
         setRangeValues("#building_trim ._height", [60, 70, 80, 90, 100])
         setRangeStyle("#range-height-trim", 5)
+        buildingData.category = "МДФ"
+        buildingData.type = "Выкрашенный"
     } else {
         trim.setValue("type", id)
         trim.setValue("category", "tree")
@@ -69,6 +71,20 @@ $("#building_trim .material__item").on("click", (e) => {
         setRangeStyle("#range-height-trim", 5)
         if (id === "oak") {
             setRangeValues("#building_trim ._thickness", [12, 14, 16, 20])
+        }
+        buildingData.category = "Массив"
+        switch (id) {
+            case "oak":
+                buildingData.type = "Дуб"
+                break
+            case "ash":
+                buildingData.type = "Ясень"
+                break
+            case "beech":
+                buildingData.type = "Бук"
+                break
+            default:
+                break
         }
     }
     initRangeFillLower()
@@ -83,6 +99,7 @@ $("#range-thickness-trim").on("input", (e) => {
     const thickness = rangeValueToThicknessTrim(trim._category, trim._type, value)
     $("#building_trim .thickness-mm").html(thickness + " мм.")
     trim.setValue("thickness", thickness)
+    buildingData.thickness = thickness
 })
 $("#range-height-trim").on("input", (e) => {
     const setCorrectInputValue = createSetCorrectInputValue(e.target)
@@ -90,8 +107,10 @@ $("#range-height-trim").on("input", (e) => {
     const height = rangeValueToHeightTrim(trim._category, trim._type, value)
     $("#building_trim .height-mm").html(height + " мм.")
     trim.setValue("height", height)
+    buildingData.height = height
 })
 $("#building_trim .size__input").on("input", (e) => {
     const value = e.target.value
     trim.setValue("metres", value)
+    buildingData.metres = value
 })

@@ -60,6 +60,8 @@ $("#building_rake .material__item").on("click", (e) => {
         setRangeStyle("#range-thickness-rake", 5)
         setRangeValues("#building_rake ._height", [20, 30, 40, 50, 60, 80, 90, 100])
         setRangeStyle("#range-height-rake", 8)
+        buildingData.category = "МДФ"
+        buildingData.type = "Выкрашенный"
     } else {
         rake.setValue("type", id)
         rake.setValue("category", "tree")
@@ -67,6 +69,20 @@ $("#building_rake .material__item").on("click", (e) => {
         setRangeStyle("#range-thickness-rake", 4)
         setRangeValues("#building_rake ._height", [30, 40, 50, 60])
         setRangeStyle("#range-height-rake", 4)
+        buildingData.category = "Массив"
+        switch (id) {
+            case "oak":
+                buildingData.type = "Дуб"
+                break
+            case "ash":
+                buildingData.type = "Ясень"
+                break
+            case "beech":
+                buildingData.type = "Бук"
+                break
+            default:
+                break
+        }
     }
     initRangeFillLower()
 })
@@ -80,6 +96,7 @@ $("#range-thickness-rake").on("input", (e) => {
     const thickness = rangeValueToThicknessRake(rake._category, rake._type, value)
     $("#building_rake .thickness-mm").html(thickness + " мм.")
     rake.setValue("thickness", thickness)
+    buildingData.thickness = thickness
 })
 
 $("#range-height-rake").on("input", (e) => {
@@ -88,8 +105,10 @@ $("#range-height-rake").on("input", (e) => {
     const height = rangeValueToHeightRake(rake._category, rake._type, value)
     $("#building_rake .height-mm").html(height + " мм.")
     rake.setValue("height", height)
+    buildingData.height = height
 })
 $("#building_rake .size__input").on("input", (e) => {
     const value = e.target.value
     rake.setValue("metres", value)
+    buildingData.metres = value
 })
