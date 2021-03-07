@@ -1,5 +1,5 @@
 .instagram {
-    padding-top: 135px;
+    padding-top: 100px;
     a {
         color: $grey;
     }
@@ -35,6 +35,7 @@
 
 @media (min-width: 900px) {
     .instagram {
+        padding-top: 135px;
         &__title {
             font-weight: bold;
             font-size: 40px;

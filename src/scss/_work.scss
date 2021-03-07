@@ -4,7 +4,7 @@
 
     &__title {
         font-weight: 500;
-        font-size: 30px;
+        font-size: 23px;
         line-height: 30px;
         text-align: center;
 
@@ -14,7 +14,7 @@
     &__container {
         display: grid;
         grid-gap: 15px;
-        padding-top: 75px;
+        padding-top: 37px;
         margin: 0 auto;
 
         img {
@@ -69,6 +69,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            padding-top: 75px;
             img {
                 max-width: 391px;
                 min-width: 280px;
