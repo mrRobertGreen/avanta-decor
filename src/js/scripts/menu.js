@@ -53,16 +53,32 @@ $("#building_plintus .types__item").on("click", (e) => {
     toggleActiveClass(e, "#building_plintus .types__item", "types__item_active")
 })
 $("#plintus_forms .grid__item").on("click", (e) => {
-    
+    const id = $(e.currentTarget).attr("id")
+    switch (id) {
+        case "plintus-evro-link":
+            $("#plintus-evro").trigger("click")
+            break;
+        case "plintus-evro-streight-link":
+            $("#plintus-evro-streight").trigger("click")
+            break;
+        case "plintus-boot-link":
+            $("#plintus-boot").trigger("click")
+            break;
+        case "plintus-figure-link":
+            $("#plintus-figure").trigger("click")
+            break;
+        default:
+            break;
+    }
 })
 $("#building_trim .types__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
     switch (id) {
-        case "trim-evro":
-            buildingData.form = "Евро"
+        case "trim-right":
+            buildingData.form = "Прямой"
             break
-        case "trim-evro-streight":
-            buildingData.form = "Евро (прямой)"
+        case "trim-right-chamfered":
+            buildingData.form = "Прямой с фасками"
             break
         case "trim-semicircular":
             buildingData.form = "Полукруглый"
@@ -74,6 +90,26 @@ $("#building_trim .types__item").on("click", (e) => {
             break
     }
     toggleActiveClass(e, "#building_trim .types__item", "types__item_active")
+})
+$("#trim_forms .grid__item").on("click", (e) => {
+    const id = $(e.currentTarget).attr("id")
+    console.log(id);
+    switch (id) {
+        case "trim-right-link":
+            $("#trim-right").trigger("click")
+            break;
+        case "trim-right-chamfered-link":
+            $("#trim-right-chamfered").trigger("click")
+            break;
+        case "trim-semicircular-link":
+            $("#trim-semicircular").trigger("click")
+            break;
+        case "trim-figure-link":
+            $("#trim-figure").trigger("click")
+            break;
+        default:
+            break;
+    }
 })
 $("#building_rake .types__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
@@ -88,6 +124,21 @@ $("#building_rake .types__item").on("click", (e) => {
             break
     }
     toggleActiveClass(e, "#building_rake .types__item", "types__item_active")
+})
+$("#rake_forms .rake-form__elem").on("click", (e) => {
+    const id = $(e.currentTarget).attr("id")
+    console.log(id);
+    switch (id) {
+        case "rake-with-groove-link":
+            console.log("click");
+            $("#rake-with-groove").trigger("click")
+            break
+        case "rake-without-groove-link":
+            $("#rake-without-groove").trigger("click")
+            break
+        default:
+            break
+    }
 })
 $("#building_rake .material__item").on("click", (e) => toggleActiveClass(e, "#building_rake .material__item", "material__item_active"))
 $("#building_plintus .material__item").on("click", (e) => toggleActiveClass(e, "#building_plintus .material__item", "material__item_active"))
@@ -109,7 +160,7 @@ $(window).scroll(function () {
     }
 })
 
-const linkClasses = ".menu__track, .liquidation__buttons, .grid"
+const linkClasses = ".menu__track, .liquidation__buttons, .grid, .rake-form__container"
 
 $(linkClasses).on('click', '[href^="#"]', async function (e) {
     // плавная прокрутка до якоря
