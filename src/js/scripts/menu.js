@@ -160,7 +160,17 @@ $(window).scroll(function () {
     }
 })
 
-const linkClasses = ".menu__track, .liquidation__buttons, .grid, .rake-form__container"
+$(".menu__btn").on("click", (e) => {
+    if ($(".menu").hasClass("_opened-list")) {
+        $(".menu").removeClass("_opened-list")
+        $(".menu_fake").removeClass("_opened-list")
+    } else {
+        $(".menu").addClass("_opened-list")
+        $(".menu_fake").addClass("_opened-list")
+    }
+})
+
+const linkClasses = ".menu__track, .liquidation__buttons, .grid, .rake-form__container, .products, .dropbox"
 
 $(linkClasses).on('click', '[href^="#"]', async function (e) {
     // плавная прокрутка до якоря
@@ -170,7 +180,19 @@ $(linkClasses).on('click', '[href^="#"]', async function (e) {
     await $('html,body').animate({
         scrollTop: $(this.hash).offset().top
     }, 500, "swing", () => isAllowedAutoSwitching = true);
+});
 
+$(".dropbox, .menu").on("click", "[href^='#']", () => {
+    $(".menu__btn").trigger("click")
+})
+$(document).mouseup(function (e) { 
+    const menu = $(".menu");
+    if (menu.has(e.target).length === 0) {
+        if ($(".menu").hasClass("_opened-list")) {
+            $(".menu").removeClass("_opened-list")
+            $(".menu_fake").removeClass("_opened-list")
+        }
+    }
 });
 
 let lastScrollTop = 0;

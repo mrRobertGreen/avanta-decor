@@ -1,17 +1,22 @@
 @import "./vars";
 
 .menu {
-    display: flex;
-    padding-left: 15px;
     background: $white;
     overflow-x: hidden;
-    justify-content: center;
+    position: relative;
+    overflow-y: hidden;
+    height: 70px;
     margin-top: 45px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+    transition: height 0.3s;
 
     &__row {
-        width: 390px;
+        width: 350px;
         display: flex;
         padding: 15px 15px 15px 3px;
+        @media (min-width: 450px) {
+            padding-right: 0;
+        }
     }
 
     &__btn {
@@ -27,6 +32,7 @@
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
         border-radius: 11px;
         margin: 15px 12px 15px 0;
+        position: relative;
     }
 
     &__btn-line {
@@ -47,6 +53,15 @@
         display: flex;
     }
 
+    &__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15px;
+        @media (min-width: 450px) {
+            padding-left: 0;
+        }
+    }
     &__item {
         cursor: pointer;
         display: block;
@@ -57,6 +72,7 @@
         background: $light-grey;
         color: $grey;
         border-radius: 11px;
+        height: 40px;
 
         &:last-child {
             margin-right: 0;
@@ -67,6 +83,22 @@
         background: $white;
         color: $black;
         box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.11);
+    }
+}
+.dropbox {
+    width: 100%;
+    padding: 5px 15px 20px;
+    background: $white;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    &__link {
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        font-size: 17px;
+        line-height: 35px;
+        color: $black;
     }
 }
 
@@ -90,4 +122,8 @@
     @media (min-width: 450px) {
         left: 0;
     }
+}
+
+.menu._opened-list, .menu_fake._opened-list {
+    height: 185px;
 }
