@@ -183,7 +183,10 @@ $(linkClasses).on('click', '[href^="#"]', async function (e) {
 });
 
 $(".dropbox, .menu").on("click", "[href^='#']", () => {
-    $(".menu__btn").trigger("click")
+    if ($(".menu").hasClass("_opened-list")) {
+        $(".menu").removeClass("_opened-list")
+        $(".menu_fake").removeClass("_opened-list")
+    }
 })
 $(document).mouseup(function (e) { 
     const menu = $(".menu");
