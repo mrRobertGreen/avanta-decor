@@ -47,16 +47,17 @@
         font-weight: normal;
         font-size: 17px;
         line-height: 25px;
-        color: $grey;
+        color: #676767;
     }
 
     &__btn {
-        border-radius: 25px;
         font-weight: 500;
         font-size: 15px;
         line-height: 15px;
+
         flex: 1 1 50%;
-        width: 210px;
+        border-radius: 25px;
+        width: 175px;
         height: 45px;
         display: block;
     }
@@ -115,6 +116,10 @@
         &__buttons {
             max-width: 80%;
         }
+        &__btn {
+            max-width: 210px;
+            width: auto;
+        }
     }
     .promo-mobile {
         display: block;
@@ -165,7 +170,13 @@
             font-size: 20px;
             line-height: 27px;
             width: 518px;
-            color: $grey;
+            color: #676767;
+            span {
+                color: $dark-blue;
+            }
+        }
+        &__btn {
+            width: 210px;
         }
 
         &__buttons {
