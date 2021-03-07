@@ -52,6 +52,9 @@ $("#building_plintus .types__item").on("click", (e) => {
     }
     toggleActiveClass(e, "#building_plintus .types__item", "types__item_active")
 })
+$("#plintus_forms .grid__item").on("click", (e) => {
+    
+})
 $("#building_trim .types__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
     switch (id) {
@@ -106,7 +109,7 @@ $(window).scroll(function () {
     }
 })
 
-const linkClasses = ".menu__track, .liquidation__buttons"
+const linkClasses = ".menu__track, .liquidation__buttons, .grid"
 
 $(linkClasses).on('click', '[href^="#"]', async function (e) {
     // плавная прокрутка до якоря
@@ -114,7 +117,7 @@ $(linkClasses).on('click', '[href^="#"]', async function (e) {
     isAllowedAutoSwitching = false
 
     await $('html,body').animate({
-        scrollTop: $(this.hash).offset().top - 100
+        scrollTop: $(this.hash).offset().top
     }, 500, "swing", () => isAllowedAutoSwitching = true);
 
 });
