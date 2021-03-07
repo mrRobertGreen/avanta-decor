@@ -2,7 +2,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    // background-color: black;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -10,41 +9,41 @@
 
     &__pics {
         img {
-            // display: block;
-            // width: calc(320px + (470 - 320) * (100vw - 320px) / (1600px - 320px));
             max-width: 470px;
         }
     }
 
     &__text {
         padding: 0 15px;
-        // background-color: red;
-        // max-width: 568px;
         padding-top: 44px;
         width: 100%;
     }
 
     &__pretitle {
         font-weight: 500;
-        font-size: 25px;
-        line-height: 25px;
+        font-size: 19px;
+        line-height: 19px;
         color: rgba(171, 176, 189, 0.5);
     }
 
     &__title {
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 30px;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 47px;
         color: $dark;
 
         span {
             color: $dark-blue;
+            @media (max-width: 385px) {
+                display: block;
+            }
         }
 
         padding-top: 12px;
     }
 
     &__subtitle {
+        font-style: normal;
         font-weight: normal;
         font-size: 17px;
         line-height: 25px;
@@ -60,7 +59,6 @@
         width: 210px;
         height: 45px;
         display: block;
-        
     }
 
     &__buttons {
@@ -72,6 +70,7 @@
             background: $dark-blue;
             margin-right: 15px;
             color: $white;
+            // flex: 0 0 50%;
             &:hover {
                 transition: 0.2s;
                 background: $hover-blue;
@@ -79,8 +78,10 @@
         }
 
         .contact {
-            background: $light-grey;
-            color: $grey;
+            background: $white;
+            // color: $grey;
+            color: #676767;
+            // flex: 0 0 50%;
             &:hover {
                 transition: 0.2s;
                 background: $light-grey;
@@ -192,7 +193,7 @@
             }
 
             .contact {
-                background: $light-grey;
+                // background: $light-grey;
                 border-radius: 25px;
 
                 div {
