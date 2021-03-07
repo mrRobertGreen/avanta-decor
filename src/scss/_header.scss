@@ -147,6 +147,7 @@
 // правки на телефон
 @media (max-width: 600px) {
     .header {
+        padding-bottom: 0;
         &__logo {
             img {
                 width: 45px;
