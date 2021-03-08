@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
 
     &__title {
         color: $black;
@@ -11,13 +12,13 @@
         font-size: 23px;
         line-height: 30px;
         text-align: center;
-        padding-top: 100px;
+        // padding-top: 100px;
     }
     .grid {
         display: grid;
         grid-gap: 60px;
         grid-template-columns: 1fr 1fr;
-        padding-top: 79px;
+        padding-top: 37px;
 
         @media (min-width: 550px) {
             grid-gap: 150px;
@@ -64,6 +65,7 @@
 }
 @media (min-width: 1250px) {
     .forms {
+        padding-top: 160px;
         .grid {
             padding-top: 79px;
 

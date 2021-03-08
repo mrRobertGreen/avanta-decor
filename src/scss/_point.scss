@@ -1,5 +1,5 @@
 .point {
-    padding-top: 150px;
+    padding-top: 100px;
     // margin: 0 auto;
     text-align: center;
 
@@ -7,7 +7,7 @@
     }
 
     &__container {
-        padding-top: 56px;
+        padding-top: 37px;
         margin: 0 auto;
         display: grid;
         grid-gap: 25px;
@@ -47,12 +47,14 @@
 
 @media (min-width: 1250px) {
     .point {
+        padding-top: 150px;
         &__container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
             width: 917px;
+            padding-top: 56px;
         }
     }
 }
