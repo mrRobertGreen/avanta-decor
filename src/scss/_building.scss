@@ -54,11 +54,10 @@
 }
 
 .types {
-    padding-top: 35px;
+    // padding-top: 37px;
     display: flex;
     padding-left: 15px;
 
-    
 
     @media (min-width: 730px) {
         padding-left: 0;
@@ -66,10 +65,11 @@
 
     &__track {
         display: flex;
-        padding-top: 81px;
+        padding-top: 37px;
 
         @media (min-width: 730px) {
             margin: 0 auto;
+            padding-top: 75px;
         }
     }
 
