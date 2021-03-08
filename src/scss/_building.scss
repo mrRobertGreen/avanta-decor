@@ -80,6 +80,7 @@
         cursor: pointer;
 
         .tick {
+            display: none;
             opacity: 0;
             visibility: hidden;
         }
@@ -111,6 +112,7 @@
         }
 
         .tick {
+            display: block;
             opacity: 1;
             visibility: visible;
             width: 32px;
@@ -118,7 +120,6 @@
             position: absolute;
             top: 0;
             right: -42px;
-
         }
     }
 
