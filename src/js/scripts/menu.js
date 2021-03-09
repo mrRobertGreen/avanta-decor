@@ -238,8 +238,10 @@ $(window).on("scroll", function () {
         $(".menu__item").removeClass("menu__item_active")
         $("#menu-" + ids[currentIndex]).addClass("menu__item_active")
         const stepLengths = [0, 55, 150]
-        menuSlider.slideTo(stepLengths[currentIndex])
-
+        if (menuSlider) {
+            menuSlider.slideTo(stepLengths[currentIndex])
+        }
+        
         setTimeout(() => {
             isAllowedAutoSwitching = true
         }, 300)
