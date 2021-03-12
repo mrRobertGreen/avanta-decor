@@ -1,4 +1,4 @@
-const plintusTree = {
+const plintusTree    = {
     oak: {
         12: {
             70: 250,

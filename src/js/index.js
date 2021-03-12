@@ -5,6 +5,7 @@ $(window).on("load", function () {
 @@include("./scripts/sizes.js")
 @@include("./scripts/building.js")
 @@include("./scripts/plintus.js")
+@@include("./scripts/plintus-new.js")
 @@include("./scripts/rake.js")
 @@include("./scripts/trim.js")
 @@include("./scripts/prices.js")

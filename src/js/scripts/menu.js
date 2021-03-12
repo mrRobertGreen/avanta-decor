@@ -76,10 +76,10 @@ $("#plintus_forms .grid__item").on("click", (e) => {
 $("#building_trim .types__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
     switch (id) {
-        case "trim-right":
+        case "trim-streight":
             buildingData.form = "Прямой"
             break
-        case "trim-right-chamfered":
+        case "trim-streight-chamfered":
             buildingData.form = "Прямой с фасками"
             break
         case "trim-semicircular":

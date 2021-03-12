@@ -1,55 +1,73 @@
-class Plintus {
-    constructor() {
-        this._category = "mdf"
-        this._type = "dyed"
-        this._thickness = 12
-        this._height = 70
-        this._metres = 1
-    }
-    _setPrice = (value) => {
-        $("#building_plintus .size__price").html(`<p>${value} ₽</p>`)
-    }
-    _setCorrectPrice = () => {
-        let price;
-        if (this._category === "tree") {
-            price = getItemFromTree(plintusTree, [this._type, this._thickness, this._height])
-        } else {
-            price = getItemFromTree(plintusMDF, [this._type, this._thickness, this._height])
-        }
-        price *= this._metres
-        this._setPrice(price)
-    }
-    setValue(field, value) {
-        switch (field) {
-            case "category":
-                this._category = value
-                break
-            case "type":
-                this._type = value
-                break
-            case "thickness":
-                this._thickness = value
-                break
-            case "height":
-                this._height = value
-                break
-            case "metres":
-                this._metres = value
-                break
-            default:
-                return
-        }
-        // console.log("category: ", this._category);
-        // console.log("type: ", this._type);
-        // console.log("thickness: ", this._thickness);
-        // console.log("height: ", this._height);
-        // console.log("metres: ", this._metres);
-        this._setCorrectPrice()
+const plintus = {
+    category: "mdf",
+    type: "dyed",
+    form: "evro",
+    thickness: 12,
+    height: 70,
+    metres: 1,
+    price: 213,
+}
+const getCategoryNameById = (id) => {
+    switch (id) {
+        case "mdf":
+            return "МДФ"
+        case "tree":
+            return "Массив"
+        default:
+            break;
     }
 }
-
-const plintus = new Plintus()
-
+const getTypeNameById = (id) => {
+    switch (id) {
+        case "dyed":
+            return "Выкрашенный"
+        case "beech":
+            return "Бук"
+        case "ash":
+            return "Ясень"
+        case "oak":
+            return "Дуб"
+        default:
+            break;
+    }
+}
+const getFormNameById = (id) => {
+    switch (id) {
+        case "evro":
+            return "Евро"
+        case "evro-streight":
+            return "Евро (прямой)"
+        case "boot":
+            return "Сапожок"
+        case "figure":
+            return "Фигурный"
+        case "with-groove":
+            return "С пазом"
+        case "without-groove":
+            return "Без паза"
+        case "streight":
+            return "Прямой"
+        case "streight-chamfered":
+            return "Прямой с фасками"
+        case "semicircular":
+            return "Полукруглый"
+        default:
+            break;
+    }
+}
+const setPrice = (selector, value) => {
+    $(selector).html(`<p>${value} ₽</p>`)
+}
+const calculatePrice = ({type, thickness, height, metres}) => {
+    let price
+    if (category === "tree") {
+        price = getItemFromTree(plintusTree, [type, thickness, height])
+    } else {
+        price = getItemFromTree(plintusMDF, [type, thickness, height])
+    }
+    price *= metres
+    return price
+}
 const setRangeValues = (selector, values) => {
     const $elem = $(selector)
     let html = ""
@@ -77,14 +95,21 @@ const setRangeStyle = (selector, count) => {
             return
     }
 }
+const getHeights = (priceData, type) => {
+    const someThickness = Object.keys(priceData[type])[0]
+    return priceData[type][someThickness]
+}
+const getThicknesses = (priceData, type) => {
+    return priceData[type]
+}
 $("#building_plintus .material__item").on("click", (e) => {
     const id = $(e.target).attr("id")
     if (id === "mdf") {
-        plintus.setValue("type", "dyed")
-        plintus.setValue("category", "mdf")
+        plintus.type = "dyed"
+        plintus.category = "mdf"
         setRangeValues("#building_plintus ._thickness", [10, 12, 16, 18])
         setRangeStyle("#range-thickness-plintus", 4)
-        setRangeValues("#building_plintus ._height", [70, 80, 100, 120, 150])
+        setRangeValues("#building_plintus ._height", getHeights(plintusMDF, "dyed"))
         setRangeStyle("#range-height-plintus", 5)
         buildingData.category = "МДФ"
         buildingData.type = "Выкрашенный"
