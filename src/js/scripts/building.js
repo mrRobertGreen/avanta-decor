@@ -15,13 +15,3 @@ $(".material__item").on("click", (e) => {
 chahgeSubmitButtonText()
 
 $(window).resize(chahgeSubmitButtonText)
-
-const buildingData = {
-	name: "Плинтус",
-	category: "МДФ",
-	form: "Евро",
-	type: "Выкрашенный",
-	thickness: 12,
-	height: 70,
-	metres: 1,
-}

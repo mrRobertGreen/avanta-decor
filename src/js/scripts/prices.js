@@ -1,4 +1,4 @@
-const plintusTree    = {
+const plintusMassifPrices = {
     oak: {
         12: {
             70: 250,
@@ -132,7 +132,7 @@ const plintusTree    = {
         },
     },
 }
-const plintusMDF = { // временно категории уходят, поэтому все цены на МДФ в dyed
+const plintusMDFPrices = { // временно категории уходят, поэтому все цены на МДФ в dyed
     finish: {
         10: {
             70: 88,
@@ -224,7 +224,7 @@ const plintusMDF = { // временно категории уходят, поэ
         },
     }
 }
-const rakeTree = {
+const rakeMassifPrices = {
     oak: {
         20: {
             30: 140,
@@ -304,7 +304,7 @@ const rakeTree = {
         },
     },
 }
-const rakeMDF = { // временно категории уходят, поэтому все цены на МДФ в dyed
+const rakeMDFPrices = { // временно категории уходят, поэтому все цены на МДФ в dyed
     finish: {
         10: {
             70: 88,
@@ -418,7 +418,7 @@ const rakeMDF = { // временно категории уходят, поэт�
         },
     }
 }
-const trimTree = {
+const trimMassifPrices = {
     oak: {
         12: {
             60: 252,
@@ -510,7 +510,7 @@ const trimTree = {
         },
     },
 }
-const trimMDF = { // временно категории уходят, поэтому все цены на МДФ в dyed
+const trimMDFPrices = { // временно категории уходят, поэтому все цены на МДФ в dyed
     finish: {
         10: {
             70: 88,
@@ -600,13 +600,5 @@ const trimMDF = { // временно категории уходят, поэт�
             90: 657,
             100: 677,
         },
-    }
-}
-
-const getItemFromTree = (tree, keys, idx = 0) => {
-    if (idx === keys.length - 1 || tree[keys[idx]] === undefined) {
-        return tree[keys[idx]]
-    } else {
-        return getItemFromTree(tree[keys[idx]], keys, ++idx)
     }
 }
