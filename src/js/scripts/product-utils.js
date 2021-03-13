@@ -1,15 +1,23 @@
 const setPrice = (selector, value) => {
     $(selector).html(`<p>${value} ₽</p>`)
 }
-const calculatePrice = ({type, thickness, height, metres, category}) => {
-    let price
-    if (category === "massif") {
-        price = getItemFromTree(plintusMassifPrices, [type, thickness, height])
-    } else {
-        price = getItemFromTree(plintusMDFPrices, [type, thickness, height])
+const calculatePrice = (product) => {
+    const {type, thickness, height, metres} = product
+    const priceData = getPriceDataByProductName(product.name)
+    let price = getItemFromTree(priceData, [type, thickness, height])
+    return price * metres
+}
+const getPriceDataByProductName = (name) => {
+    switch (name) {
+        case "Плинтус":
+            if (plintus.category === "mdf") {
+                return plintusMDFPrices
+            } else {
+                return plintusMassifPrices
+            }
+        default:
+            break;
     }
-    price *= metres
-    return price
 }
 const setRangeValues = (selector, values) => {
     const $elem = $(selector)
