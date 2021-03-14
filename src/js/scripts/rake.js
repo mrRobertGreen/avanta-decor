@@ -62,5 +62,4 @@ $("#building_rake .size__input").on("input", (e) => {
 })
 $("#building_rake .types__item").on("click", (e) => {
     rake.form = $(e.currentTarget).attr("id")
-    console.log(rake);
 })

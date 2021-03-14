@@ -62,5 +62,4 @@ $("#building_trim .size__input").on("input", (e) => {
 })
 $("#building_trim .types__item").on("click", (e) => {
     trim.form = $(e.currentTarget).attr("id")
-    console.log(trim);
 })

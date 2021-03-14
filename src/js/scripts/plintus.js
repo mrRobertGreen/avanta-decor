@@ -62,5 +62,4 @@ $("#building_plintus .size__input").on("input", (e) => {
 })
 $("#building_plintus .types__item").on("click", (e) => {
     plintus.form = $(e.currentTarget).attr("id")
-    console.log(plintus);
 })
