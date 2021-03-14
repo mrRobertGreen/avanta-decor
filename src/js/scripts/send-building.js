@@ -12,7 +12,7 @@ const getCategoryNameById = (id) => {
     switch (id) {
         case "mdf":
             return "МДФ"
-        case "tree":
+        case "massif":
             return "Массив"
         default:
             break;
@@ -34,23 +34,23 @@ const getTypeNameById = (id) => {
 }
 const getFormNameById = (id) => {
     switch (id) {
-        case "evro":
+        case "plintus-evro":
             return "Евро"
-        case "evro-streight":
+        case "plintus-evro-streight":
             return "Евро (прямой)"
-        case "boot":
+        case "plintus-boot":
             return "Сапожок"
-        case "figure":
+        case "plintus-figure": case "trim-figure":
             return "Фигурный"
-        case "with-groove":
+        case "rake-with-groove":
             return "С пазом"
-        case "without-groove":
+        case "rake-without-groove":
             return "Без паза"
-        case "streight":
+        case "trim-streight":
             return "Прямой"
-        case "streight-chamfered":
+        case "trim-streight-chamfered":
             return "Прямой с фасками"
-        case "semicircular":
+        case "trim-semicircular":
             return "Полукруглый"
         default:
             break;

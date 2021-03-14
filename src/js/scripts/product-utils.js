@@ -15,6 +15,18 @@ const getPriceDataByProductName = (name) => {
             } else {
                 return plintusMassifPrices
             }
+        case "Рейка":
+            if (rake.category === "mdf") {
+                return rakeMDFPrices
+            } else {
+                return rakeMassifPrices
+            }
+        case "Наличник":
+            if (trim.category === "mdf") {
+                return trimMDFPrices
+            } else {
+                return trimMassifPrices
+            }
         default:
             break;
     }

@@ -35,23 +35,6 @@ if (window.matchMedia("(max-width: 830px)").matches) {
 
 $(".menu__item").on("click", (e) => toggleActiveClass(e, ".menu__item", "menu__item_active"))
 $("#building_plintus .types__item").on("click", (e) => {
-    const id = $(e.currentTarget).attr("id")
-    switch (id) {
-        case "plintus-evro":
-            buildingData.form = "Евро"
-            break
-        case "plintus-evro-streight":
-            buildingData.form = "Евро (прямой)"
-            break
-        case "plintus-boot":
-            buildingData.form = "Сапожок"
-            break
-        case "plintus-figure":
-            buildingData.form = "Фигурный"
-            break
-        default:
-            break
-    }
     toggleActiveClass(e, "#building_plintus .types__item", "types__item_active")
 })
 $("#plintus_forms .grid__item").on("click", (e) => {
@@ -74,28 +57,10 @@ $("#plintus_forms .grid__item").on("click", (e) => {
     }
 })
 $("#building_trim .types__item").on("click", (e) => {
-    const id = $(e.currentTarget).attr("id")
-    switch (id) {
-        case "trim-streight":
-            buildingData.form = "Прямой"
-            break
-        case "trim-streight-chamfered":
-            buildingData.form = "Прямой с фасками"
-            break
-        case "trim-semicircular":
-            buildingData.form = "Полукруглый"
-            break
-        case "plintus-figure":
-            buildingData.form = "Фигурный"
-            break
-        default:
-            break
-    }
     toggleActiveClass(e, "#building_trim .types__item", "types__item_active")
 })
 $("#trim_forms .grid__item").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
-    console.log(id);
     switch (id) {
         case "trim-right-link":
             $("#trim-right").trigger("click")
@@ -114,25 +79,13 @@ $("#trim_forms .grid__item").on("click", (e) => {
     }
 })
 $("#building_rake .types__item").on("click", (e) => {
-    const id = $(e.currentTarget).attr("id")
-    switch (id) {
-        case "rake-with-groove":
-            buildingData.form = "С пазом"
-            break
-        case "rake-without-groove":
-            buildingData.form = "Без паза"
-            break
-        default:
-            break
-    }
     toggleActiveClass(e, "#building_rake .types__item", "types__item_active")
 })
 $("#rake_forms .rake-form__elem").on("click", (e) => {
     const id = $(e.currentTarget).attr("id")
-    console.log(id);
+    
     switch (id) {
         case "rake-with-groove-link":
-            console.log("click");
             $("#rake-with-groove").trigger("click")
             break
         case "rake-without-groove-link":
