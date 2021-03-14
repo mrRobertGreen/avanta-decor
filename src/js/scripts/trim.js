@@ -2,7 +2,7 @@ const trim = {
     name: "Наличник",
     category: "mdf",
     type: "dyed",
-    form: "streight",
+    form: "trim-streight",
     thickness: 16,
     height: 80,
     metres: 1,

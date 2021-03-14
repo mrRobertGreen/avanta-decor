@@ -3,11 +3,11 @@ let isSafari = false,
 
 // CHROME
 if (navigator.userAgent.indexOf("Chrome") != -1) {
-    console.log("Google Chrome");
+    // console.log("Google Chrome");
 }
 // FIREFOX
 else if (navigator.userAgent.indexOf("Firefox") != -1) {
-    console.log("Mozilla Firefox");
+    // console.log("Mozilla Firefox");
 }
 // INTERNET EXPLORER
 else if (navigator.userAgent.indexOf("MSIE") != -1) {
@@ -15,7 +15,7 @@ else if (navigator.userAgent.indexOf("MSIE") != -1) {
 }
 // EDGE
 else if (navigator.userAgent.indexOf("Edge") != -1) {
-    console.log("Internet Exploder");
+    // console.log("Internet Exploder");
 }
 // SAFARI
 else if (navigator.userAgent.indexOf("Safari") != -1) {
@@ -23,15 +23,15 @@ else if (navigator.userAgent.indexOf("Safari") != -1) {
 }
 // OPERA
 else if (navigator.userAgent.indexOf("Opera") != -1) {
-    console.log("Opera");
+    // console.log("Opera");
 }
 // YANDEX BROWSER
 else if (navigator.userAgent.indexOf("YaBrowser") != -1) {
-    console.log("YaBrowser");
+    // console.log("YaBrowser");
 }
 // OTHERS
 else {
-    console.log("Others");
+    // console.log("Others");
 }
 
 if (isSafari || isExplorer) {

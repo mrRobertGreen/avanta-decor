@@ -2,7 +2,7 @@ const rake = {
     name: "Рейка",
     category: "mdf",
     type: "dyed",
-    form: "with-groove",
+    form: "rake-with-groove",
     thickness: 30,
     height: 60,
     metres: 1,

@@ -2,7 +2,7 @@ const plintus = {
     name: "Плинтус",
     category: "mdf",
     type: "dyed",
-    form: "evro",
+    form: "plintus-evro",
     thickness: 12,
     height: 70,
     metres: 1,
