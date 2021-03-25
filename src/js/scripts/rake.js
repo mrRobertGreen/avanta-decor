@@ -28,7 +28,7 @@ $("#building_rake .material__item").on("click", (e) => {
         setRangeValues("#building_rake ._height", heights)
         setRangeStyle("#range-height-rake", heights.length)
     }
-    initRangeFillLower()
+    // initRangeFillLower()
     const price = calculatePrice(rake)
     setPrice("#building_rake .size__price", price)
 })
