@@ -4,55 +4,49 @@
     position: relative;
     z-index: 100;
 
+    &__dots {
+        @include flex-row;
+        align-items: flex-end;
+        max-height: 11px;
+        padding-top: 55px;
+
+        span {
+            margin: 0 0 0 7px;
+            font-size: 0;
+            width: 11px;
+            height: 11px;
+            background: #ABB0BD;
+            border-radius: 50%;
+        }
+        span.swiper-pagination-bullet-active {
+            background: #292930;
+        }
+    }
+
     &__header {
         font-weight: bold;
         font-size: 30px;
         line-height: 20px;
         text-align: center;
+        margin-top: 103px;
+        color: $black;
+    }
 
-        color: #000;
+    &__slide {
+        max-width: 387px;
+        max-height: 387px;
+        cursor: pointer;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+        }
     }
 
     &__slider {
         padding-top: 55px;
-
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 25px;
-            max-width: 387px;
-            max-height: 387px;
-        }
-    }
-}
-
-.safari {
-    display: grid;
-    grid-gap: 25px;
-    grid-template-columns: 1fr;
-    margin-top: 45px;
-    .discounts__slide {
-        margin: 0 auto;
-    }
-    img {
         width: 100%;
-        height: 100%;
-        border-radius: 25px;
-        max-width: 387px;
-        max-height: 387px;
-    }
-}
-
-@media (min-width: 600px) {
-    .safari {
-        margin-top: 60px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-    }
-}
-@media (min-width: 1250px) {
-    .safari {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
     }
 }

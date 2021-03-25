@@ -1,7 +1,6 @@
 // include your scripts here 
 $(window).on("load", function () {
 @@include("./scripts/menu.js")
-@@include("./scripts/slider.js")
 @@include("./scripts/sizes.js")
 @@include("./scripts/building.js")
 @@include("./scripts/product-utils.js")
@@ -14,4 +13,5 @@ $(window).on("load", function () {
 @@include("./scripts/header.js")
 @@include("./scripts/send-building.js")
 @@include("./scripts/form.js")
+@@include("./scripts/slider.js")
 })
