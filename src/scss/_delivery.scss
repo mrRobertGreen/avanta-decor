@@ -7,7 +7,6 @@
     position: relative;
 
     &__pic {
-        // background-color: red;
         width: calc(320px + (670 - 320) * (100vw - 320px) / (1800 - 320));
         img {
             width: 100%;
