@@ -20,10 +20,10 @@
 
 
 	//Тело письма
-	$body = '<h1>Получена новая заявка с сайта Аванта Декор!</h1>';
+	$body = '<h1>Заявка с Аванта Декор!</h1>';
 	
 	if(trim(!empty($_POST['cooperation']))){
-		$body.='<p><strong>Новый дизайнер или архитектор хочет подружиться с нами!</strong></p>';
+		$body.='<p><strong>Сотрудничество с Аванта Декор</strong></p>';
 	} else if(trim(!empty($_POST['name']))){
 		if(trim(!empty($_POST['name']))){
 			$body.='<p><strong>Название:</strong> '.$_POST['name'].'</p>';

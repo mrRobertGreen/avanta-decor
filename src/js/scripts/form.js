@@ -26,6 +26,7 @@ async function formSend(e, form) {
 	}
 	if (isCooperation) {
 		formData.append("cooperation", true)
+		isCooperation = false
 	}
 
 	if (!error) {
