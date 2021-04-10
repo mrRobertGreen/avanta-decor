@@ -5,7 +5,7 @@ $(".liquidation__btn.contact").click(() => {
 })
 $(".des").click(() => {
     isCooperation = true
-    $("#connect-popup .popup__title").html("Сотрудничество")
+    $("#connect-popup .popup__title").html("Скидка - 25%")
     openPopup("connect-popup")
     enableClosingPopupOnOverlayClick("connect-popup", "popup__body")
 })
