@@ -5,7 +5,7 @@ const calculatePrice = (product) => {
     const {type, thickness, height, metres} = product
     const priceData = getPriceDataByProductName(product.name)
     let price = getItemFromTree(priceData, [type, thickness, height])
-    return price * metres
+    return Math.round(price * metres * 1.1)
 }
 const getPriceDataByProductName = (name) => {
     switch (name) {
