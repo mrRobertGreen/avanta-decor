@@ -13,7 +13,6 @@ async function formSend(e, form) {
 	e.preventDefault();
 
 	let formData = new FormData(form);
-	// let error = formValidate(form);
 	let error = null
 
 	if (form.id === "build-popup-form") {
